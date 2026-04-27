@@ -1,228 +1,116 @@
-# 📊 NASDAQ (NQ) — BIAS יומי | שבוע 27/04/2026
+# NASDAQ (NQ) -- BIAS Daily | Week 27/04/2026
 
-> **עדכון:** 27/04/2026
-> **ביאס:** 🟡 ממתין לנתוני פתיחה
-> **מסגרת:** Daily / 4H
+> **Updated:** 2026-04-27 14:52 IST
+> **BIAS:** BULLISH
+> **Timeframe:** Daily / 4H
 
 ---
 
-## 🌍 סקירה גלובלית — סופ"ש 26-27/04
+## Global Overview
 
-### 📰 HEADS-UP יומי (מקורות)
-> *מלא ע"י סריקת מקורות ידנית / semi-auto*
+### Headlines (Blogs)
+> *Fill manually or via RSS integration*
 
-| # | מקור | BIAS | תמצית |
+| # | Source | BIAS | Summary |
 |---|------|------|-------|
-| 1 | ZeroHedge | 🟢🔴🟡 | ____ |
-| 2 | Bloomberg | 🟢🔴🟡 | ____ |
-| 3 | ForexLive | 🟢🔴🟡 | ____ |
-| 4 | MarketWatch | 🟢🔴🟡 | ____ |
-| 5 | Newsquawk | 🟢🔴🟡 | ____ |
-| 6 | TradingStrategyGuides | 🟢🔴🟡 | ____ |
-| 7 | FXEmpire | 🟢🔴🟡 | ____ |
-| 8 | Sadik Finance | 🟢🔴🟡 | ____ |
+| ZeroHedge | NEUTRAL | ____ |
+| Bloomberg | NEUTRAL | ____ |
+| ForexLive | NEUTRAL | ____ |
+| MarketWatch | NEUTRAL | ____ |
+| Newsquawk | NEUTRAL | ____ |
+| TradingStrategyGuides | NEUTRAL | ____ |
+| FXEmpire | NEUTRAL | ____ |
+| Sadik Finance | NEUTRAL | ____ |
 
-### 🐦 X (Twitter) Heads-Up
-| # | חשבון | BIAS | תמצית |
+### X (Twitter) Heads-Up
+| # | Account | BIAS | Summary |
 |---|-------|------|-------|
-| 1 | @LizAnnSonders | 🟢🔴🟡 | ____ |
-| 2 | @BoraOzkent | 🟢🔴🟡 | ____ |
-| 3 | @alphatrends | 🟢🔴🟡 | ____ |
-| 4 | @ZeroHedge | 🟢🔴🟡 | ____ |
-| 5 | @ripster47 | 🟢🔴🟡 | ____ |
-
-### סיכום Heads-Up:
-```
-BIAS משולב: 🟢🔴🟡
-בלוגים: ____
-X: ____
-השפעה על NAS100: ____
-```
+| @LizAnnSonders | NEUTRAL | ____ |
+| @BoraOzkent | NEUTRAL | ____ |
+| @alphatrends | NEUTRAL | ____ |
+| @ZeroHedge | NEUTRAL | ____ |
+| @ripster47 | NEUTRAL | ____ |
 
 ---
 
-### אירועים מהסופ"ש (כשהשוק סגור):
-```
-⬜ (יש למלא — אירועים גיאופוליטיים, הודעות, נתונים)
-⬜ 
-```
+### Live Indicators (yfinance)
+| Indicator | Value | Change | BIAS | Note |
+|-----|-----|-------|------|------|
+| DXY | 98.33 | -0.18% | [+] | Weak USD = Bullish |
+| VIX | 18.95 | +1.28% | [-] | Fear rising |
+| SPX | 7165.08 | +0.80% | [-] | Correlated w/ NQ |
+| NDX | 24836.6 | +1.63% | [-] | *Momentum Up* |
+| 10Y | 4.31 | -0.23% | [+] | Yields down = Bullish |
+| **BIAS** | **BULLISH** | **Score: 2/3** | | DXY down = Tailwind + VIX up = Fear Rising + NDX up = Momentum |
 
-### חדשות השבוע:
-```
-⬜ (יש למלא — CPI, FOMC, NFP, GDP, PMI?)
-⬜ 
-⬜ 
-```
-
-### מדדים נוכחיים (יש לעדכן בפתיחה):
-| מדד | ערך | מגמה | השפעה |
-|-----|-----|------|--------|
-| DXY | ____ | ____ | ↓DXY = ↑NQ |
-| VIX | ____ | ____ | ↑VIX = ↓NQ |
-| ES | ____ | ____ | תואם NQ |
-| תשואת 10Y | ____ | ____ | ____ |
+> Data pulled automatically: 2026-04-27 14:52 IST
 
 ---
 
-## 📐 שלב 1 — מבנה (Market Structure)
+## Step 1 -- Market Structure
 
 ### HTF Weekly
 ```
-⬜ (יש למלא — מבנה שבועי: HH/HL/LL/LH)
+[ ] Fill -- Weekly structure: HH/HL/LL/LH
 ```
 
-### מבנה Daily
+### Daily Structure
 ```
-HH אחרון: ____
-HL אחרון: ____
-LL אחרון: ____
-LH אחרון: ____
+Last HH: ____
+Last HL: ____
+Last LL: ____
+Last LH: ____
 ```
 
-### מצב:
+### Current State:
 ```
-⬜ הצטברות / ⬜ מניפולציה / ⬜ הפצה
+[ ] Accumulation / [ ] Manipulation / [ ] Distribution
 ```
 
 ---
 
-## 🔧 שלב 2 — כלים
+## Step 2 -- Tools
 
 ```
-FVG פתוח: ____
-OB פעיל: ____
+Open FVG: ____
+Active OB: ____
 SMT: ____
 ```
 
 ---
 
-## 🧭 שלב 3 — נזילות
+## Step 3 -- Liquidity
 
 ```
-BSL (יעד למעלה): ____
-SSL (יעד למטה): ____
-```
-
----
-
-## 📋 שלב 4 — ביאס
-
-```
-🟡 ממתין לנתונים
-סיבה: נדרשת בדיקת גרף + אירועי סופ"ש
+BSL (Target Up): ____
+SSL (Target Down): ____
 ```
 
 ---
 
-## ⚡ שלב 5 — תנועה
+## Step 4 -- BIAS
 
 ```
-⬜ Consolidation → ⬜ Displacement → ⬜ Impulse
-```
-
----
-
-## 📚 מקורות מידע — מאגר מלא
-
-### בלוגים / אתרים (Top 8 — סריקה יומית)
-
-#### Macro / Contrarian / Financial News
-| # | אתר | תיאור | קישור |
-|---|-----|-------|-------|
-| 1 | **ZeroHedge** | Contrarian macro, debt, Fed ביקורת | zerohedge.com |
-| 2 | **Bloomberg** | Macro, markets, terminal-style | bloomberg.com |
-| 3 | **ForexLive** | Forex & macro news בזמן אמת | forexlive.com |
-| 4 | **MarketWatch** | מניות, Nasdaq-focused | marketwatch.com |
-| 5 | **Newsquawk** | Curated market-moving news | newsquawk.com |
-
-#### SMC / ICT Specific
-| # | אתר | תיאור | קישור |
-|---|-----|-------|-------|
-| 6 | **TradingStrategyGuides** | ICT vs SMC, multi-timeframe, hybrid | tradingstrategyguides.com |
-| 7 | **FXEmpire** | ניתוחים + best prop firms 2026 | fxempire.com |
-| 8 | **Sadik Finance** | Prop Firm Blueprint (ICT/SMC) | sadikfinance.github.io |
-
-#### בלוגים נוספים (לעומק)
-| # | אתר | תיאור |
-|---|-----|-------|
-| — | Financial Times (FT) | Macro עמוק + analysis |
-| — | The Macro Compass (Substack) | Macro clear & data-driven |
-| — | Medium/@smcTradingStrategies | Top 30 SMC Strategies 2026 |
-| — | KamatTrading (Blogspot) | SMC & ICT education PDFs |
-
-#### Prop Firms
-| # | אתר | תיאור |
-|---|-----|-------|
-| — | FundedTradingPlus | Prop strategies voted by traders |
-| — | PropFundHub | Advanced ICT/SMC for prop 2026 |
-| — | PhidiasPropFirm | ICT trading guide |
-
----
-
-### 🐦 חשבונות X (טוויטר) — NASDAQ
-
-#### Macro & Market Sentiment
-| חשבון | תיאור | רלוונטיות |
-|-------|-------|-----------|
-| **@LizAnnSonders** | Chief Strategist, Schwab | ⭐⭐⭐⭐⭐ Macro Nasdaq |
-| **@BoraOzkent** | Nasdaq + tech trends | ⭐⭐⭐⭐⭐ Nasdaq direct |
-| **@morganhousel** | התנהגות שוק, עומק | ⭐⭐⭐⭐ |
-| **@ZeroHedge** | Contrarian macro | ⭐⭐⭐⭐ |
-| **@TheStalwart** | Bloomberg, דיונים חיים | ⭐⭐⭐ |
-
-#### Technical Analysis & Trading
-| חשבון | תיאור | רלוונטיות |
-|-------|-------|-----------|
-| **@alphatrends** | TA קלאסי, Nasdaq | ⭐⭐⭐⭐⭐ TA נקי |
-| **@PeterLBrandt** | Chart patterns מקצועי | ⭐⭐⭐⭐ |
-| **@ripster47** | Trade recaps יומיים | ⭐⭐⭐⭐ פעילות יומית |
-| **@SJosephBurns** | רשימות traders, שוק | ⭐⭐⭐ |
-| **@markminervini** | Stock trading wizard | ⭐⭐⭐ |
-
-#### Options, Derivatives & Prop Trading
-| חשבון | תיאור |
-|-------|-------|
-| **@Mr_Derivatives** | אופציות, derivatives, vol |
-| **@MikeBellafiore** | SMB Capital, prop trading |
-| **@WOLF_Financial** | הסברים נגישים |
-
-#### חדשות & Data-Driven
-| חשבון | תיאור |
-|-------|-------|
-| **@WSJMarkets** | עדכונים בזמן אמת |
-| **@bespokeinvest** | נתונים סטטיסטיים |
-| **@RITHOLTZ** | Macro + trading insights |
-
----
-
-## 🔄 נוהל סריקה יומי
-
-### בוקר (לפני פתיחה):
-1. סרוק 8 בלוגים ← מלא טבלת Heads-Up
-2. סרוק 5 חשבונות X מובילים ← מלא טבלת X Heads-Up
-3. בדוק לוח חדשות: ForexLive / Newsquawk
-4. בדוק מדדים: DXY, VIX, ES, 10Y
-5. קבע BIAS ראשוני: 🟢 / 🔴 / 🟡
-
-### צהריים / NYSE פתיחה:
-6. מלא שלבים 1-5 (מבנה, כלים, נזילות, ביאס, תנועה)
-
-### ערב / סגירה:
-7. עדכן תוצאות
-8. Commit שינויים ל-Git
-
----
-
-## 🗂️ ארגון X Lists
-```
-📋 "Nasdaq Bias" → @LizAnnSonders, @BoraOzkent, @alphatrends, @ZeroHedge, @ripster47
-📋 "TA Traders"  → @PeterLBrandt, @markminervini, @WOLF_Financial
-📋 "Prop Firms"   → @MikeBellafiore, @Mr_Derivatives
-📋 "Macro"        → @morganhousel, @TheStalwart, @RITHOLTZ
+BULLISH -- 27/04/2026
+Reason: DXY down = Tailwind + VIX up = Fear Rising + NDX up = Momentum
+Score: 2/3
 ```
 
 ---
 
-> ⚠️ **קובץ זה מתעדכן יומית.** מלא את השדות הריקים מהגרף בזמן אמת.
-> **DYOR:** כל המקורות למידע בלבד — לא עצות השקעה.
-> **אחרי מילוי ← commit חדש ל-Git.**
+## Step 5 -- Price Delivery
+
+```
+[ ] Consolidation -> [ ] Displacement -> [ ] Impulse
+```
+
+---
+
+## Full Source Registry
+
+> See previous NASDAQ_DAILY_BIAS.md (backed up in Git)
+
+---
+
+> **DYOR:** Sources for info only -- not investment advice.
+> **Update daily, commit to Git after filling chart fields.**

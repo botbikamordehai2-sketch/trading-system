@@ -27,7 +27,7 @@ def fetch_indicators():
         "DXY": "DX-Y.NYB",
         "VIX": "^VIX",
         "SPX": "^GSPC",
-        "NDX": "^IXIC",
+        "NDX": "^NDX",
         "10Y": "^TNX",
     }
 

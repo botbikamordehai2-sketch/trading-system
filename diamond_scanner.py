@@ -20,7 +20,7 @@ load_dotenv(Path.home() / "tv_webhook" / ".env")
 # ─────────────────────────────────────────────────────────────
 ASSETS = {
     # ── Indices ──────────────────────────────────────────────
-    "NAS100":  {"symbol": "^IXIC",    "group": "📊 Indices",    "pip": 1},
+    "NAS100":  {"symbol": "^NDX",    "group": "📊 Indices",    "pip": 1},
     "S&P500":  {"symbol": "^GSPC",    "group": "📊 Indices",    "pip": 1},
     "DOW":     {"symbol": "^DJI",     "group": "📊 Indices",    "pip": 1},
     "DAX":     {"symbol": "^GDAXI",   "group": "📊 Indices",    "pip": 1},

@@ -90,39 +90,55 @@ def calculate_bias(indicators):
 
 
 # ============================================================
-# 3. BLOG HEADLINES SCAN (RSS/Scrape - future)
+# 3. BLOG HEADLINES SCAN (RSS — LIVE)
 # ============================================================
 def scan_blogs():
-    """Scan blogs - currently stub, expand with RSS/API"""
-    blogs = {
-        "ZeroHedge": "NEUTRAL",
-        "Bloomberg": "NEUTRAL",
-        "ForexLive": "NEUTRAL",
-        "MarketWatch": "NEUTRAL",
-        "Newsquawk": "NEUTRAL",
-        "TradingStrategyGuides": "NEUTRAL",
-        "FXEmpire": "NEUTRAL",
-        "Sadik Finance": "NEUTRAL",
-    }
-    # TODO: Add RSS/API integration
-    # TODO: Add Selenium/Playwright for JavaScript sites
-    return blogs
+    """Scan real RSS feeds and return bias per source"""
+    try:
+        from blog_scanner import scan_blogs as _scan
+        data = _scan()
+        # המרה לפורמט ישן {name: bias_str} + שמירת פרטים
+        return data
+    except Exception as e:
+        print(f"  [WARN] blog_scanner error: {e}")
+        return {}
 
 
 # ============================================================
-# 4. X (TWITTER) SCAN - stub
+# 4. X (TWITTER) SCAN — חינמי דרך Nitter RSS
 # ============================================================
 def scan_x():
-    """Scan X - currently stub (X API requires $$$)"""
-    x_accounts = {
-        "@LizAnnSonders": "NEUTRAL",
-        "@BoraOzkent": "NEUTRAL",
-        "@alphatrends": "NEUTRAL",
-        "@ZeroHedge": "NEUTRAL",
-        "@ripster47": "NEUTRAL",
-    }
-    # TODO: X API v2 - requires $100/month Basic tier
-    return x_accounts
+    """Scan X accounts via Nitter RSS (free, no API key needed)"""
+    try:
+        import feedparser
+        accounts = {
+            "@LizAnnSonders": "LizAnnSonders",
+            "@alphatrends":   "alphatrends",
+            "@ZeroHedge":     "zerohedge",
+            "@ripster47":     "ripster47",
+        }
+        BULLISH = ["rally","bullish","buy","breakout","surge","long","risk-on"]
+        BEARISH = ["crash","bearish","sell","drop","recession","risk-off","short"]
+
+        results = {}
+        for handle, user in accounts.items():
+            try:
+                # Nitter RSS — חלופה חינמית לTwitter
+                url  = f"https://nitter.net/{user}/rss"
+                feed = feedparser.parse(url)
+                text = " ".join(
+                    getattr(e, "title", "") for e in feed.entries[:5]
+                ).lower()
+                bull = sum(1 for w in BULLISH if w in text)
+                bear = sum(1 for w in BEARISH if w in text)
+                bias = "BULLISH" if bull > bear else ("BEARISH" if bear > bull else "NEUTRAL")
+                results[handle] = {"bias": bias, "bull": bull, "bear": bear}
+            except Exception:
+                results[handle] = {"bias": "NEUTRAL"}
+        return results
+    except Exception as e:
+        print(f"  [WARN] X scan error: {e}")
+        return {}
 
 
 # ============================================================
@@ -313,6 +329,14 @@ if __name__ == "__main__":
     # Step 5: Update file
     print("\n[5/5] Updating BIAS FILE...")
     update_bias_file(indicators, bias, score, details, blogs, x_accounts)
+
+    # Step 6: Send Telegram report
+    print("\n[6/6] Sending Telegram report...")
+    try:
+        from telegram_daily import send_report
+        send_report(indicators, bias, score, details, blogs)
+    except Exception as e:
+        print(f"  [WARN] Telegram skip: {e}")
 
     print("\n" + "=" * 60)
     print("[DONE] Scan complete!")

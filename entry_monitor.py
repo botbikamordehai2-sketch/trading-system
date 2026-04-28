@@ -20,11 +20,16 @@ ASSETS = {
     # סחורות
     "XAUUSD":  {"symbol": "GC=F",     "group": "Commodities"},
     "XAGUSD":  {"symbol": "SI=F",     "group": "Commodities"},
-    # פורקס
+    # פורקס — עיקריים
     "EURUSD":  {"symbol": "EURUSD=X", "group": "Forex"},
     "GBPUSD":  {"symbol": "GBPUSD=X", "group": "Forex"},
     "USDJPY":  {"symbol": "JPY=X",    "group": "Forex"},
     "AUDUSD":  {"symbol": "AUDUSD=X", "group": "Forex"},
+    # פורקס — AUD crosses
+    "AUDNZD":  {"symbol": "AUDNZD=X", "group": "Forex"},
+    "AUDCAD":  {"symbol": "AUDCAD=X", "group": "Forex"},
+    "AUDCHF":  {"symbol": "AUDCHF=X", "group": "Forex"},
+    "AUDJPY":  {"symbol": "AUDJPY=X", "group": "Forex"},
 }
 
 INTERVAL   = 15 * 60   # 15 דקות
@@ -42,6 +47,10 @@ MT5_SYMBOL_MAP = {
     "USDJPY": "USDJPY",
     "AUDUSD": "AUDUSD",
     "USDCHF": "USDCHF",
+    "AUDNZD": "AUDNZD",
+    "AUDCAD": "AUDCAD",
+    "AUDCHF": "AUDCHF",
+    "AUDJPY": "AUDJPY",
 }
 
 alerted = {}   # מניעת כפילויות: {asset: last_signal}

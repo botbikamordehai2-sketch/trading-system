@@ -25,6 +25,10 @@ ASSETS = {
     "GBPUSD": {"sym": "GBPUSD=X", "group": "Forex"},
     "USDJPY": {"sym": "JPY=X",    "group": "Forex"},
     "AUDUSD": {"sym": "AUDUSD=X", "group": "Forex"},
+    "AUDNZD": {"sym": "AUDNZD=X", "group": "Forex"},
+    "AUDCAD": {"sym": "AUDCAD=X", "group": "Forex"},
+    "AUDCHF": {"sym": "AUDCHF=X", "group": "Forex"},
+    "AUDJPY": {"sym": "AUDJPY=X", "group": "Forex"},
 }
 
 

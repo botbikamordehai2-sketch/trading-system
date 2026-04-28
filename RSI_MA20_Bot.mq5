@@ -17,8 +17,8 @@ input int    InpSLPips       = 30;     // Stop Loss (pips)
 input double InpMaxDailyLoss = 4.5;   // מקסימום הפסד יומי (%) — FTMO
 input double InpMaxDrawdown  = 9.0;   // מקסימום drawdown (%) — FTMO
 input int    InpMagic        = 202600; // Magic Number
-input int    InpSessionStart = 8;      // סשן התחלה (UTC)
-input int    InpSessionEnd   = 17;     // סשן סיום (UTC)
+input int    InpSessionStart = 0;      // סשן התחלה (UTC)
+input int    InpSessionEnd   = 24;     // סשן סיום (UTC)
 
 CTrade        trade;
 CPositionInfo pos;

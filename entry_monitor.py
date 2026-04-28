@@ -31,7 +31,30 @@ INTERVAL   = 15 * 60   # 15 דקות
 CHAT_ID    = os.getenv("ALL_CHAT_ID", os.getenv("NASDAQ_CHAT_ID", "1246833993"))
 TOKEN      = os.getenv("TELEGRAM_TOKEN")
 
+MT5_FILES  = r"C:\Users\gfdh5555\AppData\Roaming\MetaQuotes\Terminal\Common\Files"
+
+MT5_SYMBOL_MAP = {
+    "DOW":    "US30.cash",
+    "XAUUSD": "XAUUSD",
+    "XAGUSD": "XAGUSD",
+    "EURUSD": "EURUSD",
+    "GBPUSD": "GBPUSD",
+    "USDJPY": "USDJPY",
+    "AUDUSD": "AUDUSD",
+    "USDCHF": "USDCHF",
+}
+
 alerted = {}   # מניעת כפילויות: {asset: last_signal}
+
+
+def write_mt5_signal(name: str, direction: str):
+    mt5_sym = MT5_SYMBOL_MAP.get(name)
+    if not mt5_sym:
+        return
+    path = os.path.join(MT5_FILES, f"signal_{mt5_sym}.txt")
+    with open(path, "w") as f:
+        f.write(f"{direction},{int(time.time())}")
+    print(f"  [MT5 BRIDGE] {mt5_sym} {direction} → {path}")
 
 
 def compute_rsi(series: pd.Series, period: int = 14) -> float:
@@ -157,6 +180,8 @@ def run_once():
             print(f"  {name:10} — אין סיגנל")
 
     if entries:
+        for e in entries:
+            write_mt5_signal(e["name"], e["direction"])
         asyncio.run(send_alert(entries))
     else:
         print(f"  -> אין כניסות כרגע. הבא: {INTERVAL//60} דקות")

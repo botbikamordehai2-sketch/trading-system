@@ -193,12 +193,69 @@ void CheckSignal(string sym)
 }
 
 //+------------------------------------------------------------------+
+//| קריאת איתות מ-Python bridge                                      |
+//+------------------------------------------------------------------+
+void CheckBridgeSignal(string sym)
+{
+    if(HasPosition(sym)) return;
+
+    string filename = "signal_" + sym + ".txt";
+    int handle = FileOpen(filename, FILE_READ|FILE_COMMON|FILE_TXT|FILE_ANSI);
+    if(handle == INVALID_HANDLE) return;
+
+    string content = FileReadString(handle);
+    FileClose(handle);
+    FileDelete(filename, FILE_COMMON);
+
+    string parts[];
+    int count = StringSplit(content, ',', parts);
+    if(count < 2) return;
+
+    string direction = parts[0];
+    long   sigTime   = StringToInteger(parts[1]);
+    long   now       = (long)TimeCurrent();
+
+    if(now - sigTime > 900) { Print("[BRIDGE] איתות ישן — מתעלם"); return; }
+
+    int    digits = (int)SymbolInfoInteger(sym, SYMBOL_DIGITS);
+    double point  = SymbolInfoDouble(sym, SYMBOL_POINT);
+    double mult   = (digits == 3 || digits == 5) ? 10.0 : 1.0;
+    double slDist = InpSLPips * point * mult;
+    double tpDist = slDist * 2.0;
+    double lot    = CalcLot(sym, InpSLPips);
+
+    if(direction == "LONG")
+    {
+        double ask = SymbolInfoDouble(sym, SYMBOL_ASK);
+        double sl  = NormalizeDouble(ask - slDist, digits);
+        double tp  = NormalizeDouble(ask + tpDist, digits);
+        if(trade.Buy(lot, sym, ask, sl, tp, "Bridge LONG"))
+            Print("[BRIDGE] LONG  ", sym, " | lot:", lot, " | SL:", sl, " | TP:", tp);
+        else
+            Print("[BRIDGE] FAIL LONG ", sym, " | error:", trade.ResultRetcode());
+    }
+    else if(direction == "SHORT")
+    {
+        double bid = SymbolInfoDouble(sym, SYMBOL_BID);
+        double sl  = NormalizeDouble(bid + slDist, digits);
+        double tp  = NormalizeDouble(bid - tpDist, digits);
+        if(trade.Sell(lot, sym, bid, sl, tp, "Bridge SHORT"))
+            Print("[BRIDGE] SHORT ", sym, " | lot:", lot, " | SL:", sl, " | TP:", tp);
+        else
+            Print("[BRIDGE] FAIL SHORT ", sym, " | error:", trade.ResultRetcode());
+    }
+}
+
+//+------------------------------------------------------------------+
 //| OnTick — רץ על כל תנועת מחיר, מבדיק נר חדש בלבד                |
 //+------------------------------------------------------------------+
 void OnTick()
 {
     static datetime lastBar = 0;
     datetime curBar = iTime(_Symbol, PERIOD_M15, 0);
+
+    CheckBridgeSignal(_Symbol);
+
     if(curBar == lastBar) return;
     lastBar = curBar;
 

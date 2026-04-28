@@ -38,9 +38,22 @@ int OnInit()
     g_DailyBalance   = g_InitialBalance;
     g_LastDay        = TimeCurrent();
 
+    EventSetTimer(5);  // בדיקת bridge כל 5 שניות
+
     Print("=== RSI+MA20 Bot מופעל ===");
     Print("בלנס: ", g_InitialBalance, " | ריסק: ", InpRisk, "% | FTMO guard: ", InpMaxDailyLoss, "%/", InpMaxDrawdown, "%");
     return INIT_SUCCEEDED;
+}
+
+void OnTimer()
+{
+    if(!FTMOGuard()) return;
+    CheckBridgeSignal(_Symbol);
+}
+
+void OnDeinit(const int reason)
+{
+    EventKillTimer();
 }
 
 //+------------------------------------------------------------------+

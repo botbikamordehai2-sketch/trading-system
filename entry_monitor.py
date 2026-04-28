@@ -131,13 +131,28 @@ def check_entry(name: str, info: dict) -> dict | None:
 
         alerted[key] = time.time()
 
+        # חישוב ATR לקביעת SL/TP
+        high  = h["High"]
+        low   = h["Low"]
+        atr   = (high - low).rolling(14).mean().iloc[-1]
+        atr   = round(atr, 4)
+
+        if direction == "LONG":
+            sl = round(price - atr * 1.5, 4)
+            tp = round(price + atr * 3.0, 4)
+        else:
+            sl = round(price + atr * 1.5, 4)
+            tp = round(price - atr * 3.0, 4)
+
         return {
             "name":      name,
             "group":     info["group"],
             "direction": direction,
             "price":     price,
             "rsi":       rsi,
-            "ma20":      ma20,
+            "sl":        sl,
+            "tp":        tp,
+            "atr":       atr,
             "signals":   signals,
         }
 
@@ -155,9 +170,12 @@ async def send_alert(entries: list):
 
     for e in entries:
         arrow = "BUY" if e["direction"] == "LONG" else "SELL"
-        emoji = "" if e["direction"] == "LONG" else ""
+        emoji = "🟢" if e["direction"] == "LONG" else "🔴"
         msg += f"{emoji} *{e['name']}* — {arrow}\n"
-        msg += f"   Price: {e['price']} | RSI: {e['rsi']}\n"
+        msg += f"   💰 כניסה: `{e['price']}`\n"
+        msg += f"   🛑 SL: `{e['sl']}`\n"
+        msg += f"   🎯 TP: `{e['tp']}`\n"
+        msg += f"   📊 RSI: {e['rsi']}\n"
         for s in e["signals"]:
             msg += f"   • {s}\n"
         msg += "\n"

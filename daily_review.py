@@ -18,12 +18,16 @@ CHAT_ID = os.getenv("ALL_CHAT_ID", "1246833993")
 LOG_FILE = Path(__file__).parent / "signals_log.json"
 
 ASSETS = {
-    "DOW":    {"sym": "^DJI",     "group": "Indices"},
+    "US100":  {"sym": "^NDX",     "group": "Indices"},
+    "US500":  {"sym": "^GSPC",    "group": "Indices"},
     "XAUUSD": {"sym": "GC=F",     "group": "Commodities"},
     "XAGUSD": {"sym": "SI=F",     "group": "Commodities"},
+    "USOIL":  {"sym": "CL=F",     "group": "Commodities"},
     "EURUSD": {"sym": "EURUSD=X", "group": "Forex"},
     "GBPUSD": {"sym": "GBPUSD=X", "group": "Forex"},
     "USDJPY": {"sym": "JPY=X",    "group": "Forex"},
+    "USDCHF": {"sym": "USDCHF=X", "group": "Forex"},
+    "USDCAD": {"sym": "USDCAD=X", "group": "Forex"},
     "AUDUSD": {"sym": "AUDUSD=X", "group": "Forex"},
     "AUDNZD": {"sym": "AUDNZD=X", "group": "Forex"},
     "AUDCAD": {"sym": "AUDCAD=X", "group": "Forex"},

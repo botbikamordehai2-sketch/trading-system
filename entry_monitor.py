@@ -15,15 +15,19 @@ if sys.platform == "win32":
 load_dotenv(Path.home() / "tv_webhook" / ".env")
 
 ASSETS = {
-    # מדדים — הוסר NAS100/S&P500 (33%/41% הצלחה בלבד)
-    "DOW":     {"symbol": "^DJI",     "group": "Indices"},
+    # מדדים
+    "US100":   {"symbol": "^NDX",     "group": "Indices"},
+    "US500":   {"symbol": "^GSPC",    "group": "Indices"},
     # סחורות
     "XAUUSD":  {"symbol": "GC=F",     "group": "Commodities"},
     "XAGUSD":  {"symbol": "SI=F",     "group": "Commodities"},
+    "USOIL":   {"symbol": "CL=F",     "group": "Commodities"},
     # פורקס — עיקריים
     "EURUSD":  {"symbol": "EURUSD=X", "group": "Forex"},
     "GBPUSD":  {"symbol": "GBPUSD=X", "group": "Forex"},
     "USDJPY":  {"symbol": "JPY=X",    "group": "Forex"},
+    "USDCHF":  {"symbol": "USDCHF=X", "group": "Forex"},
+    "USDCAD":  {"symbol": "USDCAD=X", "group": "Forex"},
     "AUDUSD":  {"symbol": "AUDUSD=X", "group": "Forex"},
     # פורקס — AUD crosses
     "AUDNZD":  {"symbol": "AUDNZD=X", "group": "Forex"},
@@ -39,14 +43,17 @@ TOKEN      = os.getenv("TELEGRAM_TOKEN")
 MT5_FILES  = r"C:\Users\gfdh5555\AppData\Roaming\MetaQuotes\Terminal\Common\Files"
 
 MT5_SYMBOL_MAP = {
-    "DOW":    "US30.cash",
+    "US100":  "US100.cash",
+    "US500":  "US500.cash",
     "XAUUSD": "XAUUSD",
     "XAGUSD": "XAGUSD",
+    "USOIL":  "USOIL.cash",
     "EURUSD": "EURUSD",
     "GBPUSD": "GBPUSD",
     "USDJPY": "USDJPY",
-    "AUDUSD": "AUDUSD",
     "USDCHF": "USDCHF",
+    "USDCAD": "USDCAD",
+    "AUDUSD": "AUDUSD",
     "AUDNZD": "AUDNZD",
     "AUDCAD": "AUDCAD",
     "AUDCHF": "AUDCHF",

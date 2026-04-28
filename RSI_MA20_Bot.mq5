@@ -138,27 +138,33 @@ void CheckSignal(string sym)
     double lot    = CalcLot(sym, InpSLPips);
 
     double rsiVal = rsi[1];
+    double maVal  = ma[1];
     double price  = SymbolInfoDouble(sym, SYMBOL_BID);
 
+    bool isLong  = (rsiVal < 30) ||
+                   (rsiVal >= 48 && rsiVal <= 65 && price > maVal);
+    bool isShort = (rsiVal > 70) ||
+                   (rsiVal >= 35 && rsiVal <= 52 && price < maVal);
+
     // ── LONG ─────────────────────────────────────────────
-    if(rsiVal < 30)
+    if(isLong)
     {
         double ask = SymbolInfoDouble(sym, SYMBOL_ASK);
         double sl  = NormalizeDouble(ask - slDist, digits);
         double tp  = NormalizeDouble(ask + tpDist, digits);
         if(trade.Buy(lot, sym, ask, sl, tp, "RSI-Bot LONG"))
-            Print("LONG  ", sym, " | RSI:", DoubleToString(rsiVal,1), " | lot:", lot, " | SL:", sl, " | TP:", tp);
+            Print("LONG  ", sym, " | RSI:", DoubleToString(rsiVal,1), " | MA:", DoubleToString(maVal,digits), " | lot:", lot, " | SL:", sl, " | TP:", tp);
         else
             Print("FAIL LONG  ", sym, " | error:", trade.ResultRetcode(), " - ", trade.ResultRetcodeDescription());
     }
     // ── SHORT ────────────────────────────────────────────
-    else if(rsiVal > 70)
+    else if(isShort)
     {
         double bid = SymbolInfoDouble(sym, SYMBOL_BID);
         double sl  = NormalizeDouble(bid + slDist, digits);
         double tp  = NormalizeDouble(bid - tpDist, digits);
         if(trade.Sell(lot, sym, bid, sl, tp, "RSI-Bot SHORT"))
-            Print("SHORT ", sym, " | RSI:", DoubleToString(rsiVal,1), " | lot:", lot, " | SL:", sl, " | TP:", tp);
+            Print("SHORT ", sym, " | RSI:", DoubleToString(rsiVal,1), " | MA:", DoubleToString(maVal,digits), " | lot:", lot, " | SL:", sl, " | TP:", tp);
         else
             Print("FAIL SHORT ", sym, " | error:", trade.ResultRetcode(), " - ", trade.ResultRetcodeDescription());
     }

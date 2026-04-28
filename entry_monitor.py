@@ -200,6 +200,12 @@ def run_once():
     if entries:
         for e in entries:
             write_mt5_signal(e["name"], e["direction"])
+            # שמירה ליומן לצורך ועדת חקירה יומית
+            try:
+                from daily_review import log_signal
+                log_signal(e["name"], e["direction"], e["price"], e["sl"], e["tp"])
+            except:
+                pass
         asyncio.run(send_alert(entries))
     else:
         print(f"  -> אין כניסות כרגע. הבא: {INTERVAL//60} דקות")

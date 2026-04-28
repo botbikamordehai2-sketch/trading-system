@@ -15,18 +15,16 @@ if sys.platform == "win32":
 load_dotenv(Path.home() / "tv_webhook" / ".env")
 
 ASSETS = {
-    "NAS100":  {"symbol": "^NDX",    "group": "Indices"},
-    "S&P500":  {"symbol": "^GSPC",    "group": "Indices"},
+    # מדדים — הוסר NAS100/S&P500 (33%/41% הצלחה בלבד)
     "DOW":     {"symbol": "^DJI",     "group": "Indices"},
-    "Nikkei":  {"symbol": "^N225",    "group": "Indices"},
+    # סחורות
     "XAUUSD":  {"symbol": "GC=F",     "group": "Commodities"},
     "XAGUSD":  {"symbol": "SI=F",     "group": "Commodities"},
-    "WTI":     {"symbol": "CL=F",     "group": "Commodities"},
+    # פורקס
     "EURUSD":  {"symbol": "EURUSD=X", "group": "Forex"},
     "GBPUSD":  {"symbol": "GBPUSD=X", "group": "Forex"},
     "USDJPY":  {"symbol": "JPY=X",    "group": "Forex"},
     "AUDUSD":  {"symbol": "AUDUSD=X", "group": "Forex"},
-    "BTCUSD":  {"symbol": "BTC-USD",  "group": "Crypto"},
 }
 
 INTERVAL   = 15 * 60   # 15 דקות
@@ -45,53 +43,59 @@ def compute_rsi(series: pd.Series, period: int = 14) -> float:
 
 
 def check_entry(name: str, info: dict) -> dict | None:
+    from datetime import timezone
+    import datetime as dt
+
+    # פילטר סשן — רק לונדון + NY (8-17 UTC)
+    utc_hour = dt.datetime.now(timezone.utc).hour
+    if utc_hour < 8 or utc_hour >= 17:
+        return None
+
     try:
         h    = yf.Ticker(info["symbol"]).history(period="5d", interval="15m")
-        if h.empty or len(h) < 20:
+        if h.empty or len(h) < 50:
             return None
 
         close = h["Close"]
-        high  = h["High"]
-        low   = h["Low"]
-
         price = round(close.iloc[-1], 4)
         rsi   = compute_rsi(close)
-        ma20  = round(close.rolling(20).mean().iloc[-1], 4)
+        ma20  = close.rolling(20).mean()
+        ma50  = close.rolling(50).mean()
+        ma20v = round(ma20.iloc[-1], 4)
+        ma50v = round(ma50.iloc[-1], 4)
+
+        # פילטר טרנד MA50
+        trend_up   = price > ma50v
+        trend_down = price < ma50v
 
         signals = []
         direction = None
 
-        # ── LONG signals ──────────────────────────────────────
-        if 50 < rsi < 65 and price > ma20:
-            signals.append(f"RSI {rsi} + מעל MA20")
-            direction = "LONG"
+        # ── LONG signals (רק עם טרנד עולה) ───────────────────
+        if trend_up:
+            if rsi < 30:
+                signals.append(f"RSI {rsi} Oversold — ריבאונד?")
+                direction = "LONG"
+            if 50 < rsi < 65 and price > ma20v:
+                signals.append(f"RSI {rsi} מומנטום + מעל MA20")
+                direction = "LONG"
+            prev_below = close.iloc[-3] < ma20.iloc[-3]
+            if prev_below and price > ma20v and rsi < 65:
+                signals.append("Cross above MA20")
+                direction = "LONG"
 
-        if rsi < 32:
-            signals.append(f"RSI {rsi} Oversold — ריבאונד?")
-            direction = "LONG"
-
-        # מחיר חצה MA20 מלמטה (2 נרות אישור)
-        prev_below = close.iloc[-3] < close.rolling(20).mean().iloc[-3]
-        now_above  = price > ma20
-        if prev_below and now_above and rsi < 65:
-            signals.append("Cross above MA20")
-            direction = "LONG"
-
-        # ── SHORT signals ─────────────────────────────────────
-        if rsi > 72 and price < ma20:
-            signals.append(f"RSI {rsi} Overbought + מתחת MA20")
-            direction = "SHORT"
-
-        if rsi > 78:
-            signals.append(f"RSI {rsi} Extreme Overbought")
-            direction = "SHORT"
-
-        # מחיר חצה MA20 מלמעלה
-        prev_above = close.iloc[-3] > close.rolling(20).mean().iloc[-3]
-        now_below  = price < ma20
-        if prev_above and now_below and rsi > 35:
-            signals.append("Cross below MA20")
-            direction = "SHORT"
+        # ── SHORT signals (רק עם טרנד יורד) ──────────────────
+        if trend_down:
+            if rsi > 70:
+                signals.append(f"RSI {rsi} Overbought")
+                direction = "SHORT"
+            if rsi > 35 and rsi < 52 and price < ma20v:
+                signals.append(f"RSI {rsi} מומנטום שלילי + מתחת MA20")
+                direction = "SHORT"
+            prev_above = close.iloc[-3] > ma20.iloc[-3]
+            if prev_above and price < ma20v and rsi > 35:
+                signals.append("Cross below MA20")
+                direction = "SHORT"
 
         if not signals or not direction:
             return None

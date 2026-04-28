@@ -12,10 +12,13 @@
 input double InpRisk         = 1.0;    // ריסק לעסקה (%)
 input int    InpRSIPeriod    = 14;     // RSI Period
 input int    InpMAPeriod     = 20;     // MA Period
+input int    InpMA50Period   = 50;     // MA50 Period (טרנד)
 input int    InpSLPips       = 30;     // Stop Loss (pips)
 input double InpMaxDailyLoss = 4.5;   // מקסימום הפסד יומי (%) — FTMO
 input double InpMaxDrawdown  = 9.0;   // מקסימום drawdown (%) — FTMO
 input int    InpMagic        = 202600; // Magic Number
+input int    InpSessionStart = 8;      // סשן התחלה (UTC)
+input int    InpSessionEnd   = 17;     // סשן סיום (UTC)
 
 CTrade        trade;
 CPositionInfo pos;
@@ -120,31 +123,42 @@ void CheckSignal(string sym)
 {
     if(HasPosition(sym)) return;
 
+    // פילטר סשן — רק לונדון + NY (UTC)
+    MqlDateTime t;
+    TimeToStruct(TimeGMT(), t);
+    if(t.hour < InpSessionStart || t.hour >= InpSessionEnd) return;
+
     int hRSI = iRSI(sym, PERIOD_M15, InpRSIPeriod, PRICE_CLOSE);
     int hMA  = iMA (sym, PERIOD_M15, InpMAPeriod,  0, MODE_SMA, PRICE_CLOSE);
-    if(hRSI == INVALID_HANDLE || hMA == INVALID_HANDLE) return;
+    int hMA50= iMA (sym, PERIOD_M15, InpMA50Period, 0, MODE_SMA, PRICE_CLOSE);
+    if(hRSI == INVALID_HANDLE || hMA == INVALID_HANDLE || hMA50 == INVALID_HANDLE) return;
 
-    double rsi[], ma[];
-    ArraySetAsSeries(rsi, true);
-    ArraySetAsSeries(ma,  true);
-    if(CopyBuffer(hRSI, 0, 0, 3, rsi) < 3) { IndicatorRelease(hRSI); IndicatorRelease(hMA); return; }
-    if(CopyBuffer(hMA,  0, 0, 3, ma)  < 3) { IndicatorRelease(hRSI); IndicatorRelease(hMA); return; }
+    double rsi[], ma[], ma50[];
+    ArraySetAsSeries(rsi,  true);
+    ArraySetAsSeries(ma,   true);
+    ArraySetAsSeries(ma50, true);
+    if(CopyBuffer(hRSI, 0, 0, 3, rsi)  < 3) { IndicatorRelease(hRSI); IndicatorRelease(hMA); IndicatorRelease(hMA50); return; }
+    if(CopyBuffer(hMA,  0, 0, 3, ma)   < 3) { IndicatorRelease(hRSI); IndicatorRelease(hMA); IndicatorRelease(hMA50); return; }
+    if(CopyBuffer(hMA50,0, 0, 3, ma50) < 3) { IndicatorRelease(hRSI); IndicatorRelease(hMA); IndicatorRelease(hMA50); return; }
 
     int    digits = (int)SymbolInfoInteger(sym, SYMBOL_DIGITS);
     double point  = SymbolInfoDouble(sym, SYMBOL_POINT);
     double mult   = (digits == 3 || digits == 5) ? 10.0 : 1.0;
     double slDist = InpSLPips * point * mult;
-    double tpDist = slDist * 2.0;   // R:R 1:2
+    double tpDist = slDist * 2.0;
     double lot    = CalcLot(sym, InpSLPips);
 
     double rsiVal = rsi[1];
     double maVal  = ma[1];
+    double ma50Val= ma50[1];
     double price  = SymbolInfoDouble(sym, SYMBOL_BID);
 
-    bool isLong  = (rsiVal < 30) ||
-                   (rsiVal >= 48 && rsiVal <= 65 && price > maVal);
-    bool isShort = (rsiVal > 70) ||
-                   (rsiVal >= 35 && rsiVal <= 52 && price < maVal);
+    // פילטר טרנד MA50
+    bool trendUp   = price > ma50Val;
+    bool trendDown = price < ma50Val;
+
+    bool isLong  = trendUp   && ((rsiVal < 30) || (rsiVal >= 48 && rsiVal <= 65 && price > maVal));
+    bool isShort = trendDown && ((rsiVal > 70) || (rsiVal >= 35 && rsiVal <= 52 && price < maVal));
 
     // ── LONG ─────────────────────────────────────────────
     if(isLong)
@@ -171,6 +185,7 @@ void CheckSignal(string sym)
 
     IndicatorRelease(hRSI);
     IndicatorRelease(hMA);
+    IndicatorRelease(hMA50);
 }
 
 //+------------------------------------------------------------------+

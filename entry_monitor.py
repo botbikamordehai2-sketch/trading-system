@@ -66,14 +66,6 @@ def compute_rsi(series: pd.Series, period: int = 14) -> float:
 
 
 def check_entry(name: str, info: dict) -> dict | None:
-    from datetime import timezone
-    import datetime as dt
-
-    # פילטר סשן — רק לונדון + NY (8-17 UTC)
-    utc_hour = dt.datetime.now(timezone.utc).hour
-    if utc_hour < 8 or utc_hour >= 17:
-        return None
-
     try:
         h    = yf.Ticker(info["symbol"]).history(period="5d", interval="15m")
         if h.empty or len(h) < 50:
@@ -171,11 +163,30 @@ async def send_alert(entries: list):
     for e in entries:
         arrow = "BUY" if e["direction"] == "LONG" else "SELL"
         emoji = "🟢" if e["direction"] == "LONG" else "🔴"
+
+        # סטטוס כניסה לפי RSI
+        rsi = e["rsi"]
+        if e["direction"] == "LONG":
+            if rsi < 30:
+                status = "✅ מוכן לכניסה עכשיו"
+            elif rsi < 40:
+                status = "⏳ המתן לאישור — RSI מתקרב"
+            else:
+                status = f"⏳ המתן למחיר {e['sl']} לפני כניסה"
+        else:
+            if rsi > 70:
+                status = "✅ מוכן לכניסה עכשיו"
+            elif rsi > 60:
+                status = "⏳ המתן לאישור — RSI מתקרב"
+            else:
+                status = f"⏳ המתן למחיר {e['sl']} לפני כניסה"
+
         msg += f"{emoji} *{e['name']}* — {arrow}\n"
+        msg += f"   {status}\n"
         msg += f"   💰 כניסה: `{e['price']}`\n"
         msg += f"   🛑 SL: `{e['sl']}`\n"
         msg += f"   🎯 TP: `{e['tp']}`\n"
-        msg += f"   📊 RSI: {e['rsi']}\n"
+        msg += f"   📊 RSI: {rsi}\n"
         for s in e["signals"]:
             msg += f"   • {s}\n"
         msg += "\n"

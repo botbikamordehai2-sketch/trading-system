@@ -2,8 +2,8 @@
 Entry Monitor — מנטר הזדמנויות כניסה ושולח התראת טלגרם
 רץ כל 15 דקות, שולח רק כשיש סיגנל אמיתי
 """
-import sys, asyncio, os, time
-from datetime import datetime
+import sys, asyncio, os, time, requests
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import yfinance as yf
 import pandas as pd
@@ -45,6 +45,38 @@ MT5_SYMBOL_MAP = {
 }
 
 alerted = {}   # מניעת כפילויות: {asset: last_signal}
+_news_cache = {"time": 0, "events": []}  # cache ל-15 דקות
+
+
+def get_high_impact_news(within_hours: int = 2) -> str | None:
+    """מחזיר שם האירוע אם יש HIGH impact event ב-N שעות הקרובות, אחרת None"""
+    global _news_cache
+    now_ts = time.time()
+
+    # cache — מרענן כל 15 דקות
+    if now_ts - _news_cache["time"] > 900:
+        try:
+            r = requests.get(
+                "https://nfs.faireconomy.media/ff_calendar_thisweek.json",
+                timeout=5
+            )
+            _news_cache = {"time": now_ts, "events": r.json()}
+        except:
+            return None  # אם API נכשל — לא חוסמים
+
+    now_utc = datetime.now(timezone.utc)
+    cutoff  = now_utc + timedelta(hours=within_hours)
+
+    for ev in _news_cache["events"]:
+        if ev.get("impact") != "High":
+            continue
+        try:
+            ev_time = datetime.fromisoformat(ev["date"].replace("Z", "+00:00"))
+            if now_utc <= ev_time <= cutoff:
+                return ev.get("title", "HIGH NEWS")
+        except:
+            continue
+    return None
 
 
 def write_mt5_signal(name: str, direction: str):
@@ -123,6 +155,9 @@ def check_entry(name: str, info: dict) -> dict | None:
 
         alerted[key] = time.time()
 
+        # פילטר חדשות — HIGH impact event ב-2 שעות הקרובות
+        news_event = get_high_impact_news(within_hours=2)
+
         # חישוב ATR לקביעת SL/TP
         high  = h["High"]
         low   = h["Low"]
@@ -146,6 +181,7 @@ def check_entry(name: str, info: dict) -> dict | None:
             "tp":        tp,
             "atr":       atr,
             "signals":   signals,
+            "news_warn": news_event,
         }
 
     except Exception as e:
@@ -182,6 +218,8 @@ async def send_alert(entries: list):
                 status = f"⏳ המתן למחיר {e['sl']} לפני כניסה"
 
         msg += f"{emoji} *{e['name']}* — {arrow}\n"
+        if e.get("news_warn"):
+            msg += f"   ⚠️ *חדשות HIGH:* {e['news_warn']} — שקול לדלג!\n"
         msg += f"   {status}\n"
         msg += f"   💰 כניסה: `{e['price']}`\n"
         msg += f"   🛑 SL: `{e['sl']}`\n"

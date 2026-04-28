@@ -153,12 +153,16 @@ void CheckSignal(string sym)
     double ma50Val= ma50[1];
     double price  = SymbolInfoDouble(sym, SYMBOL_BID);
 
-    // פילטר טרנד MA50
+    // פילטר טרנד MA50 — RSI קיצוני (<25 או >75) עוקף את הפילטר
     bool trendUp   = price > ma50Val;
     bool trendDown = price < ma50Val;
+    bool extremeLong  = rsiVal < 25;
+    bool extremeShort = rsiVal > 75;
 
-    bool isLong  = trendUp   && ((rsiVal < 30) || (rsiVal >= 48 && rsiVal <= 65 && price > maVal));
-    bool isShort = trendDown && ((rsiVal > 70) || (rsiVal >= 35 && rsiVal <= 52 && price < maVal));
+    bool isLong  = (extremeLong) ||
+                   (trendUp   && ((rsiVal < 30) || (rsiVal >= 48 && rsiVal <= 65 && price > maVal)));
+    bool isShort = (extremeShort) ||
+                   (trendDown && ((rsiVal > 70) || (rsiVal >= 35 && rsiVal <= 52 && price < maVal)));
 
     // ── LONG ─────────────────────────────────────────────
     if(isLong)

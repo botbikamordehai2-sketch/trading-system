@@ -226,9 +226,9 @@ void CheckBridgeSignal(string sym)
 
     string direction = parts[0];
     long   sigTime   = StringToInteger(parts[1]);
-    long   now       = (long)TimeCurrent();
+    long   now       = (long)TimeGMT();  // UTC תמיד — כמו Python time.time()
 
-    if(now - sigTime > 900) { Print("[BRIDGE] איתות ישן — מתעלם"); return; }
+    if(now - sigTime > 900) { Print("[BRIDGE] איתות ישן — מתעלם | now=",now," sig=",sigTime," diff=",now-sigTime); return; }
 
     int    digits = (int)SymbolInfoInteger(sym, SYMBOL_DIGITS);
     double point  = SymbolInfoDouble(sym, SYMBOL_POINT);

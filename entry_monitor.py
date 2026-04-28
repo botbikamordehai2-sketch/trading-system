@@ -155,8 +155,12 @@ def check_entry(name: str, info: dict) -> dict | None:
 
         alerted[key] = time.time()
 
-        # פילטר חדשות — HIGH impact event ב-2 שעות הקרובות
+        # פילטר חדשות — HIGH impact event ב-2 שעות הקרובות → חסום לגמרי
         news_event = get_high_impact_news(within_hours=2)
+        if news_event:
+            print(f"  [NEWS BLOCK] {name} — חדשות HIGH: {news_event}")
+            alerted.pop(key, None)  # מאפס כדי שיישלח אחרי החדשות
+            return None
 
         # חישוב ATR לקביעת SL/TP
         high  = h["High"]
@@ -181,7 +185,6 @@ def check_entry(name: str, info: dict) -> dict | None:
             "tp":        tp,
             "atr":       atr,
             "signals":   signals,
-            "news_warn": news_event,
         }
 
     except Exception as e:
@@ -218,8 +221,6 @@ async def send_alert(entries: list):
                 status = f"⏳ המתן למחיר {e['sl']} לפני כניסה"
 
         msg += f"{emoji} *{e['name']}* — {arrow}\n"
-        if e.get("news_warn"):
-            msg += f"   ⚠️ *חדשות HIGH:* {e['news_warn']} — שקול לדלג!\n"
         msg += f"   {status}\n"
         msg += f"   💰 כניסה: `{e['price']}`\n"
         msg += f"   🛑 SL: `{e['sl']}`\n"

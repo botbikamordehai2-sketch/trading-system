@@ -1,6 +1,6 @@
 # CHANGELOG — Trading System
 
-## [2026-04-30] — Claude Code (Architect)
+## [2026-04-30 00:30] — Claude Code (Architect)
 
 ### Added
 - `scanner_to_blog.py` — Diamond Scanner output → ICT Blog daily post (08:35)
@@ -11,6 +11,11 @@
   - Task Scheduler: `ScannerToBlog` @ 08:35 daily
 
 ### Changed
+- `entry_monitor.py` — Session Filter added
+  - `BLOCKED_HOURS_UTC = (15, 16)` — חסום בימים 28-31 לחודש
+  - Month-end Rebalancing: flows מוסדיים מייצרים תנועות מטעות
+  - Reason: 30/4 = סוף חודש, VIX +5.5% — סביבת Risk-Off
+
 - `entry_monitor.py` — Circuit Breaker added
   - `MAX_DAILY_TRADES = 2` — hard lock after 2 trades/day
   - Counts from `signals_log.json` — survives restarts

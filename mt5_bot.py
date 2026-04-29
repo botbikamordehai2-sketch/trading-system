@@ -29,9 +29,8 @@ ASSETS = {
     "AUDUSD":  {"yf": "AUDUSD=X",  "mt5": "AUDUSD",  "digits": 5, "sl_pips": 30},
     "XAUUSD":  {"yf": "GC=F",      "mt5": "XAUUSD",  "digits": 2, "sl_pips": 200},
     "XAGUSD":  {"yf": "SI=F",      "mt5": "XAGUSD",  "digits": 3, "sl_pips": 50},
-    "NAS100":  {"yf": "^NDX",      "mt5": "NAS100",  "digits": 1, "sl_pips": 150},
-    "US500":   {"yf": "^GSPC",     "mt5": "US500",   "digits": 1, "sl_pips": 50},
-    "BTCUSD":  {"yf": "BTC-USD",   "mt5": "BTCUSD",  "digits": 2, "sl_pips": 500},
+    "NAS100":  {"yf": "^NDX",      "mt5": "US100.cash", "digits": 1, "sl_pips": 150},
+    "US500":   {"yf": "^GSPC",     "mt5": "US500.cash","digits": 1, "sl_pips": 50},
 }
 
 # ─── מצב ─────────────────────────────────────────────────
@@ -206,14 +205,26 @@ def run_once():
 
 
 # ─── חיבור ל-MT5 ─────────────────────────────────────────
+MT5_PATH = r"C:\Program Files\FTMO Global Markets MT5 Terminal\terminal64.exe"
+
 def connect_mt5() -> bool:
-    if not mt5.initialize():
+    if not mt5.initialize(path=MT5_PATH):
         print(f"[ERROR] MT5 לא אותחל: {mt5.last_error()}")
-        print("וודא ש-MetaTrader5 פתוח ומחובר לחשבון FTMO Demo")
         return False
 
     account = mt5.account_info()
     print(f"[MT5] מחובר | חשבון: {account.login} | בלנס: {account.balance} | ברוקר: {account.company}")
+
+    # חכה ל-AutoTrading
+    print("[MT5] מחכה להפעלת Algo Trading ב-MT5...")
+    for i in range(60):
+        if mt5.terminal_info().trade_allowed:
+            print("[MT5] Algo Trading פעיל!")
+            return True
+        if i % 5 == 0:
+            print(f"  ממתין... לחץ ▶ Algo Trading ב-MT5 ({60-i}s נותרו)")
+        time.sleep(1)
+    print("[WARNING] Algo Trading לא הופעל — ממשיך בכל מקרה")
     return True
 
 

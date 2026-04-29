@@ -1,4 +1,4 @@
-"""SILVER Deep Analysis — Structure, FVG, OB, Entry"""
+ו "SILVER Deep Analysis — Structure, FVG, OB, Entry"""
 import sys
 import yfinance as yf
 from datetime import datetime

@@ -47,6 +47,9 @@ int OnInit()
 
 void OnTimer()
 {
+    static int tick = 0;
+    tick++;
+    if(tick % 6 == 1) Print("[TIMER] alive #", tick, " | trade_allowed=", (bool)TerminalInfoInteger(TERMINAL_TRADE_ALLOWED));
     if(!FTMOGuard()) return;
     CheckBridgeSignal(_Symbol);
 }

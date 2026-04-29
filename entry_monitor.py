@@ -68,6 +68,23 @@ MAX_DAILY_TRADES  = 2      # מקסימום עסקאות ביום
 DAILY_PROFIT_TARGET = 100  # $ — עצור אם הרווח היומי הושג
 _circuit = {"date": None, "trades_today": 0}
 
+# ── Session Filter ─────────────────────────────────────────
+# Month-end / Quarter-end rebalancing: חסום 15:00-17:00 UTC
+# גם ביום רגיל — לא לסחור בגז טבעי (high vol) אחרי 21:00 UTC
+BLOCKED_HOURS_UTC = (15, 16)  # tuple של שעות חסומות (UTC)
+
+
+def session_filter_check() -> bool:
+    """False = שעת Rebalancing / סגירת חודש — לא נכנסים."""
+    hour = datetime.now(timezone.utc).hour
+    day  = datetime.now().day
+    month_end = day >= 28  # 28-31 לחודש = סיכון Rebalancing
+
+    if month_end and hour in BLOCKED_HOURS_UTC:
+        print(f"  [SESSION FILTER] {hour}:xx UTC | Month-end rebalancing window — נעול")
+        return False
+    return True
+
 
 def circuit_breaker_check() -> bool:
     """מחזיר True אם מותר לסחור, False אם הגענו לגבול."""
@@ -287,6 +304,8 @@ def run_once():
     print(f"\n[{datetime.now().strftime('%H:%M')}] סורק כניסות...")
 
     if not circuit_breaker_check():
+        return
+    if not session_filter_check():
         return
 
     entries = []

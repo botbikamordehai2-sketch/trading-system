@@ -63,6 +63,37 @@ MT5_SYMBOL_MAP = {
 alerted = {}   # מניעת כפילויות: {asset: last_signal}
 _news_cache = {"time": 0, "events": []}  # cache ל-15 דקות
 
+# ── Circuit Breaker ────────────────────────────────────────
+MAX_DAILY_TRADES  = 2      # מקסימום עסקאות ביום
+DAILY_PROFIT_TARGET = 100  # $ — עצור אם הרווח היומי הושג
+_circuit = {"date": None, "trades_today": 0}
+
+
+def circuit_breaker_check() -> bool:
+    """מחזיר True אם מותר לסחור, False אם הגענו לגבול."""
+    today = datetime.now().date().isoformat()
+    if _circuit["date"] != today:
+        _circuit["date"] = today
+        _circuit["trades_today"] = 0
+
+    # ספור עסקאות שבוצעו היום מתוך signals_log.json
+    log_path = Path(__file__).parent / "signals_log.json"
+    if log_path.exists():
+        try:
+            import json
+            logs = json.loads(log_path.read_text(encoding="utf-8"))
+            _circuit["trades_today"] = sum(
+                1 for e in logs
+                if e.get("date", "").startswith(today)
+            )
+        except Exception:
+            pass
+
+    if _circuit["trades_today"] >= MAX_DAILY_TRADES:
+        print(f"  [CIRCUIT BREAKER] {_circuit['trades_today']}/{MAX_DAILY_TRADES} עסקאות היום — נעול עד חצות")
+        return False
+    return True
+
 
 def get_high_impact_news(within_hours: int = 2) -> str | None:
     """מחזיר שם האירוע אם יש HIGH impact event ב-N שעות הקרובות, אחרת None"""
@@ -254,6 +285,10 @@ async def send_alert(entries: list):
 
 def run_once():
     print(f"\n[{datetime.now().strftime('%H:%M')}] סורק כניסות...")
+
+    if not circuit_breaker_check():
+        return
+
     entries = []
     for name, info in ASSETS.items():
         result = check_entry(name, info)
@@ -264,6 +299,13 @@ def run_once():
             print(f"  {name:10} — אין סיגנל")
 
     if entries:
+        # Circuit Breaker — שלח רק עד המגבלה היומית
+        slots_left = MAX_DAILY_TRADES - _circuit["trades_today"]
+        if slots_left <= 0:
+            print(f"  [CIRCUIT BREAKER] אין מקום לעסקאות נוספות היום")
+            return
+        entries = entries[:slots_left]
+
         for e in entries:
             write_mt5_signal(e["name"], e["direction"])
             # שמירה ליומן לצורך ועדת חקירה יומית

@@ -1,5 +1,17 @@
 # CHANGELOG — Trading System
 
+## [2026-04-30] — Claude Code (Architect)
+
+### Added
+- `entry_monitor.py` — WhatsApp second channel via CallMeBot API
+  - `send_whatsapp_alert()` — HTTP-only, no browser required
+  - Config: `WHATSAPP_PHONE` + `WHATSAPP_APIKEY` in `.env`
+  - Graceful fallback: silently skips if not configured
+  - Setup: שלח "I allow callmebot to send me messages" ל-+34 644 65 21 91
+  - Fires alongside Telegram after every signal batch
+
+---
+
 ## [2026-04-30 00:30] — Claude Code (Architect)
 
 ### Added

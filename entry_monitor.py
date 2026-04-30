@@ -40,6 +40,14 @@ INTERVAL   = 15 * 60   # 15 דקות
 CHAT_ID    = os.getenv("ALL_CHAT_ID", os.getenv("NASDAQ_CHAT_ID", "1246833993"))
 TOKEN      = os.getenv("TELEGRAM_TOKEN")
 
+# ── WhatsApp (CallMeBot) ───────────────────────────────────
+# הגדרה: שלח "I allow callmebot to send me messages" ל-+34 644 65 21 91
+# ותקבל API key חזרה בWhatsApp. הכנס ב-.env:
+#   WHATSAPP_PHONE=972XXXXXXXXX   (כולל קידומת ללא +)
+#   WHATSAPP_APIKEY=XXXXXXXX
+WHATSAPP_PHONE  = os.getenv("WHATSAPP_PHONE")
+WHATSAPP_APIKEY = os.getenv("WHATSAPP_APIKEY")
+
 MT5_FILES  = r"C:\Users\gfdh5555\AppData\Roaming\MetaQuotes\Terminal\Common\Files"
 
 MT5_SYMBOL_MAP = {
@@ -63,10 +71,33 @@ MT5_SYMBOL_MAP = {
 alerted = {}   # מניעת כפילויות: {asset: last_signal}
 _news_cache = {"time": 0, "events": []}  # cache ל-15 דקות
 
-# ── Circuit Breaker ────────────────────────────────────────
+# ── Circuit Breaker (HARD LOCK) ─────────────────────────────
 MAX_DAILY_TRADES  = 2      # מקסימום עסקאות ביום
 DAILY_PROFIT_TARGET = 100  # $ — עצור אם הרווח היומי הושג
+LOCK_FILE         = Path(__file__).parent / "circuit_breaker.lock"
+TRADES_TODAY_FILE = Path(__file__).parent / "trades_today.txt"
+PID_FILE          = Path(__file__).parent / "entry_monitor.pid"
 _circuit = {"date": None, "trades_today": 0}
+
+
+def ensure_single_instance():
+    """מונע הרצת יותר מ-instance אחד. Fix: באג 3 — ריבוי instances."""
+    import os
+    if PID_FILE.exists():
+        try:
+            old_pid = int(PID_FILE.read_text().strip())
+            import psutil
+            if psutil.pid_exists(old_pid):
+                print(f"[ABORT] כבר רץ instance (PID {old_pid}). יוצא.")
+                sys.exit(0)
+        except Exception:
+            pass  # PID ישן לא קיים — ממשיכים
+    PID_FILE.write_text(str(os.getpid()))
+
+
+def cleanup_pid():
+    if PID_FILE.exists():
+        PID_FILE.unlink()
 
 # ── Session Filter ─────────────────────────────────────────
 # Month-end / Quarter-end rebalancing: חסום 15:00-17:00 UTC
@@ -87,29 +118,63 @@ def session_filter_check() -> bool:
 
 
 def circuit_breaker_check() -> bool:
-    """מחזיר True אם מותר לסחור, False אם הגענו לגבול."""
+    """Hard lock: מקסימום 2 עסקאות ביום. Fix: באג 1+2."""
     today = datetime.now().date().isoformat()
+
+    # Fix באג 2: נקה קבצים רק אם הם מיום קודם (לא בכל startup)
     if _circuit["date"] != today:
         _circuit["date"] = today
         _circuit["trades_today"] = 0
 
-    # ספור עסקאות שבוצעו היום מתוך signals_log.json
-    log_path = Path(__file__).parent / "signals_log.json"
-    if log_path.exists():
+        # בדוק אם ה-lock מיום קודם — רק אז מוחקים
+        if LOCK_FILE.exists():
+            content = LOCK_FILE.read_text()
+            if today not in content:  # lock מיום אחר — מוחקים
+                LOCK_FILE.unlink()
+        if TRADES_TODAY_FILE.exists():
+            content = TRADES_TODAY_FILE.read_text().strip()
+            # קובץ נשמר עם תאריך — אם יום אחר, מחיקה
+            if not content.startswith(today):
+                TRADES_TODAY_FILE.unlink()
+
+    # Hard Lock — קיים ומיום היום
+    if LOCK_FILE.exists():
+        print(f"  [CIRCUIT BREAKER — HARD LOCK] נעול. אין כניסות היום.")
+        return False
+
+    # קרא מונה מיום היום
+    if TRADES_TODAY_FILE.exists():
         try:
-            import json
-            logs = json.loads(log_path.read_text(encoding="utf-8"))
-            _circuit["trades_today"] = sum(
-                1 for e in logs
-                if e.get("date", "").startswith(today)
-            )
+            line = TRADES_TODAY_FILE.read_text().strip()
+            # פורמט: "2026-04-30:3"
+            if ":" in line:
+                file_date, count = line.split(":", 1)
+                _circuit["trades_today"] = int(count) if file_date == today else 0
+            else:
+                _circuit["trades_today"] = int(line)
         except Exception:
-            pass
+            _circuit["trades_today"] = 0
+
+    print(f"  [CB] עסקאות היום: {_circuit['trades_today']}/{MAX_DAILY_TRADES}")
 
     if _circuit["trades_today"] >= MAX_DAILY_TRADES:
-        print(f"  [CIRCUIT BREAKER] {_circuit['trades_today']}/{MAX_DAILY_TRADES} עסקאות היום — נעול עד חצות")
+        LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades")
+        print(f"  [CIRCUIT BREAKER — LOCKED] {_circuit['trades_today']}/{MAX_DAILY_TRADES} — נעול עד חצות")
         return False
     return True
+
+
+def increment_trade_counter():
+    """Fix באג 1: עדכן מונה + כתוב קובץ עם תאריך."""
+    today = datetime.now().date().isoformat()
+    _circuit["trades_today"] += 1
+    # שמור עם תאריך כדי שהבדיקה תזהה יום חדש נכון
+    TRADES_TODAY_FILE.write_text(f"{today}:{_circuit['trades_today']}")
+    print(f"  [CB] מונה עודכן: {_circuit['trades_today']}/{MAX_DAILY_TRADES}")
+
+    if _circuit["trades_today"] >= MAX_DAILY_TRADES:
+        LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades")
+        print(f"  [CIRCUIT BREAKER — LOCKED] {_circuit['trades_today']}/{MAX_DAILY_TRADES} — נעול עד חצות")
 
 
 def get_high_impact_news(within_hours: int = 2) -> str | None:
@@ -141,6 +206,28 @@ def get_high_impact_news(within_hours: int = 2) -> str | None:
         except:
             continue
     return None
+
+
+def send_whatsapp_alert(entries: list):
+    """שולח התראת WhatsApp דרך CallMeBot API (HTTP בלבד, ללא browser)."""
+    if not WHATSAPP_PHONE or not WHATSAPP_APIKEY:
+        return  # לא מוגדר — מדלג בשקט
+    try:
+        now = datetime.now().strftime("%H:%M")
+        lines = [f"ENTRY ALERT {now}"]
+        for e in entries:
+            arrow = "BUY" if e["direction"] == "LONG" else "SELL"
+            lines.append(f"{arrow} {e['name']} | RSI:{e['rsi']} | IN:{e['price']} SL:{e['sl']} TP:{e['tp']}")
+        text = "\n".join(lines)
+
+        requests.get(
+            "https://api.callmebot.com/whatsapp.php",
+            params={"phone": WHATSAPP_PHONE, "text": text, "apikey": WHATSAPP_APIKEY},
+            timeout=10,
+        )
+        print(f"  [WHATSAPP] נשלח ל-{WHATSAPP_PHONE}")
+    except Exception as ex:
+        print(f"  [WHATSAPP] שגיאה: {ex}")
 
 
 def write_mt5_signal(name: str, direction: str):
@@ -318,31 +405,40 @@ def run_once():
             print(f"  {name:10} — אין סיגנל")
 
     if entries:
-        # Circuit Breaker — שלח רק עד המגבלה היומית
+        # Circuit Breaker — שלח רק עד המגבלה היומית (Fix באג 1)
         slots_left = MAX_DAILY_TRADES - _circuit["trades_today"]
         if slots_left <= 0:
             print(f"  [CIRCUIT BREAKER] אין מקום לעסקאות נוספות היום")
             return
-        entries = entries[:slots_left]
+        # שלח רק signal אחד (הכי חזק) — לא batch שלם
+        entries = entries[:1]
 
         for e in entries:
             write_mt5_signal(e["name"], e["direction"])
-            # שמירה ליומן לצורך ועדת חקירה יומית
+            increment_trade_counter()  # Fix באג 1: עדכן מונה לאחר כל signal
             try:
                 from daily_review import log_signal
                 log_signal(e["name"], e["direction"], e["price"], e["sl"], e["tp"])
-            except:
+            except Exception:
                 pass
+
         asyncio.run(send_alert(entries))
+        send_whatsapp_alert(entries)
     else:
         print(f"  -> אין כניסות כרגע. הבא: {INTERVAL//60} דקות")
 
 
 if __name__ == "__main__":
+    ensure_single_instance()  # Fix באג 3: מונע ריבוי instances
+    import atexit
+    atexit.register(cleanup_pid)
+
     print("="*50)
     print(f"Entry Monitor פעיל — כל {INTERVAL//60} דקות")
     print(f"נכסים: {len(ASSETS)} | Chat: {CHAT_ID}")
+    print(f"PID: {Path('entry_monitor.pid').read_text() if Path('entry_monitor.pid').exists() else 'N/A'}")
     print("="*50)
     while True:
         run_once()
+        time.sleep(INTERVAL)
         time.sleep(INTERVAL)

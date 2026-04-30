@@ -2,7 +2,11 @@
 Entry Monitor — מנטר הזדמנויות כניסה ושולח התראת טלגרם
 רץ כל 15 דקות, שולח רק כשיש סיגנל אמיתי
 """
-import sys, asyncio, os, time, requests
+import sys
+import asyncio
+import os
+import time
+import requests
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import yfinance as yf
@@ -87,14 +91,14 @@ def ensure_single_instance():
     import os
     if PID_FILE.exists():
         try:
-            old_pid = int(PID_FILE.read_text().strip())
+            old_pid = int(PID_FILE.read_text(encoding="utf-8").strip())
             import psutil
             if psutil.pid_exists(old_pid):
                 print(f"[ABORT] כבר רץ instance (PID {old_pid}). יוצא.")
                 sys.exit(0)
         except Exception:
             pass  # PID ישן לא קיים — ממשיכים
-    PID_FILE.write_text(str(os.getpid()))
+    PID_FILE.write_text(str(os.getpid()), encoding="utf-8")
 
 
 def cleanup_pid():
@@ -128,26 +132,37 @@ def circuit_breaker_check() -> bool:
         _circuit["date"] = today
         _circuit["trades_today"] = 0
 
-        # בדוק אם ה-lock מיום קודם — רק אז מוחקים
+        # Fix באג 1: שימוש ב-encoding="utf-8" מפורש לכל הקריאות/כתיבות
         if LOCK_FILE.exists():
-            content = LOCK_FILE.read_text()
-            if today not in content:  # lock מיום אחר — מוחקים
-                LOCK_FILE.unlink()
+            try:
+                content = LOCK_FILE.read_text(encoding="utf-8")
+                if today not in content:  # lock מיום אחר — מוחקים
+                    LOCK_FILE.unlink()
+            except (UnicodeDecodeError, UnicodeError):
+                LOCK_FILE.unlink()  # קובץ פגום — מוחק
         if TRADES_TODAY_FILE.exists():
-            content = TRADES_TODAY_FILE.read_text().strip()
-            # קובץ נשמר עם תאריך — אם יום אחר, מחיקה
-            if not content.startswith(today):
-                TRADES_TODAY_FILE.unlink()
+            try:
+                content = TRADES_TODAY_FILE.read_text(encoding="utf-8").strip()
+                if not content.startswith(today):
+                    TRADES_TODAY_FILE.unlink()
+            except (UnicodeDecodeError, UnicodeError):
+                TRADES_TODAY_FILE.unlink()  # קובץ פגום — מוחק
 
     # Hard Lock — קיים ומיום היום
     if LOCK_FILE.exists():
-        print(f"  [CIRCUIT BREAKER — HARD LOCK] נעול. אין כניסות היום.")
-        return False
+        try:
+            content = LOCK_FILE.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, UnicodeError):
+            pass
+        else:
+            if today in content:
+                print("  [CIRCUIT BREAKER — HARD LOCK] נעול. אין כניסות היום.")
+                return False
 
     # קרא מונה מיום היום
     if TRADES_TODAY_FILE.exists():
         try:
-            line = TRADES_TODAY_FILE.read_text().strip()
+            line = TRADES_TODAY_FILE.read_text(encoding="utf-8").strip()
             # פורמט: "2026-04-30:3"
             if ":" in line:
                 file_date, count = line.split(":", 1)
@@ -160,7 +175,7 @@ def circuit_breaker_check() -> bool:
     print(f"  [CB] עסקאות היום: {_circuit['trades_today']}/{MAX_DAILY_TRADES}")
 
     if _circuit["trades_today"] >= MAX_DAILY_TRADES:
-        LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades")
+        LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades", encoding="utf-8")
         print(f"  [CIRCUIT BREAKER — LOCKED] {_circuit['trades_today']}/{MAX_DAILY_TRADES} — נעול עד חצות")
         return False
     return True
@@ -171,11 +186,11 @@ def increment_trade_counter():
     today = datetime.now().date().isoformat()
     _circuit["trades_today"] += 1
     # שמור עם תאריך כדי שהבדיקה תזהה יום חדש נכון
-    TRADES_TODAY_FILE.write_text(f"{today}:{_circuit['trades_today']}")
+    TRADES_TODAY_FILE.write_text(f"{today}:{_circuit['trades_today']}", encoding="utf-8")
     print(f"  [CB] מונה עודכן: {_circuit['trades_today']}/{MAX_DAILY_TRADES}")
 
     if _circuit["trades_today"] >= MAX_DAILY_TRADES:
-        LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades")
+        LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades", encoding="utf-8")
         print(f"  [CIRCUIT BREAKER — LOCKED] {_circuit['trades_today']}/{MAX_DAILY_TRADES} — נעול עד חצות")
 
 
@@ -201,15 +216,18 @@ def drawdown_check() -> bool:
     # שמור/טען equity בתחילת היום
     start_equity = current_equity
     if DAILY_EQUITY_FILE.exists():
-        content = DAILY_EQUITY_FILE.read_text().strip()
-        if ":" in content:
-            file_date, val = content.split(":", 1)
-            if file_date == today:
-                start_equity = float(val)
-            else:
-                DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}")
+        try:
+            content = DAILY_EQUITY_FILE.read_text(encoding="utf-8").strip()
+            if ":" in content:
+                file_date, val = content.split(":", 1)
+                if file_date == today:
+                    start_equity = float(val)
+                else:
+                    DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}", encoding="utf-8")
+        except (UnicodeDecodeError, UnicodeError):
+            DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}", encoding="utf-8")
     else:
-        DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}")
+        DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}", encoding="utf-8")
 
     if start_equity <= 0:
         return True
@@ -281,7 +299,7 @@ def write_mt5_signal(name: str, direction: str):
     if not mt5_sym:
         return
     path = os.path.join(MT5_FILES, f"signal_{mt5_sym}.txt")
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(f"{direction},{int(time.time())}")
     print(f"  [MT5 BRIDGE] {mt5_sym} {direction} → {path}")
 
@@ -312,32 +330,61 @@ def check_entry(name: str, info: dict) -> dict | None:
         trend_up   = price > ma50v
         trend_down = price < ma50v
 
+        # ── Fix באג 4: Anti-trend momentum filter ──────────────
+        # בדוק אם 3 נרות אחרונים באותו כיוון (בלי reversal)
+        last3 = close.iloc[-3:].values
+        last3_bullish = all(last3[i] > last3[i-1] for i in range(1, len(last3)))
+        last3_bearish = all(last3[i] < last3[i-1] for i in range(1, len(last3)))
+
+        # RSI כיוון (rising/falling) — חישוב RSI וקטורי מלא
+        delta2 = close.diff()
+        gain2  = delta2.clip(lower=0)
+        loss2  = (-delta2.clip(upper=0))
+        avg_gain = gain2.rolling(14).mean()
+        avg_loss = loss2.rolling(14).mean()
+        rs2 = avg_gain / avg_loss.replace(0, 1e-9)
+        rsi_series = (100 - 100 / (1 + rs2)).dropna()
+        rsi_rising  = len(rsi_series) >= 4 and rsi_series.iloc[-1] > rsi_series.iloc[-3]
+        rsi_falling = len(rsi_series) >= 4 and rsi_series.iloc[-1] < rsi_series.iloc[-3]
+
         signals = []
         direction = None
 
-        # ── LONG signals (רק עם טרנד עולה) ───────────────────
+        # ── LONG signals (רק עם טרנד עולה + מומנטום) ──────────
         if trend_up:
-            if rsi < 30:
-                signals.append(f"RSI {rsi} Oversold — ריבאונד?")
+            # Fix באג 5: חסום LONG אם 3 נרות אחרונים דוביים (trend momentum reversal)
+            if last3_bearish:
+                pass  # no LONG signals on bearish momentum
+            elif rsi < 30 and rsi_rising:
+                signals.append(f"RSI {rsi} Oversold + Rising — ריבאונד?")
                 direction = "LONG"
-            if 50 < rsi < 65 and price > ma20v:
-                signals.append(f"RSI {rsi} מומנטום + מעל MA20")
+            elif 50 < rsi < 65 and price > ma20v and rsi_rising:
+                signals.append(f"RSI {rsi} מומנטום + מעל MA20 + RSI Rising")
+                direction = "LONG"
+            elif 30 <= rsi <= 50 and rsi_rising and price > ma20v:
+                signals.append(f"RSI {rsi} מתאושש + מעל MA20")
                 direction = "LONG"
             prev_below = close.iloc[-3] < ma20.iloc[-3]
-            if prev_below and price > ma20v and rsi < 65:
+            if prev_below and price > ma20v and rsi < 65 and not last3_bearish:
                 signals.append("Cross above MA20")
                 direction = "LONG"
 
-        # ── SHORT signals (רק עם טרנד יורד) ──────────────────
+        # ── SHORT signals (רק עם טרנד יורד + מומנטום) ──────────
         if trend_down:
-            if rsi > 70:
-                signals.append(f"RSI {rsi} Overbought")
+            # Fix באג 5: חסום SHORT אם 3 נרות אחרונים שוריים (trend momentum reversal)
+            if last3_bullish:
+                pass  # no SHORT signals on bullish momentum
+            elif rsi > 70 and rsi_falling:
+                signals.append(f"RSI {rsi} Overbought + Falling")
                 direction = "SHORT"
-            if rsi > 35 and rsi < 52 and price < ma20v:
-                signals.append(f"RSI {rsi} מומנטום שלילי + מתחת MA20")
+            elif 35 < rsi < 52 and price < ma20v and rsi_falling:
+                signals.append(f"RSI {rsi} מומנטום שלילי + מתחת MA20 + RSI Falling")
+                direction = "SHORT"
+            elif 50 <= rsi <= 70 and rsi_falling and price < ma20v:
+                signals.append(f"RSI {rsi} נחלש + מתחת MA20")
                 direction = "SHORT"
             prev_above = close.iloc[-3] > ma20.iloc[-3]
-            if prev_above and price < ma20v and rsi > 35:
+            if prev_above and price < ma20v and rsi > 35 and not last3_bullish:
                 signals.append("Cross below MA20")
                 direction = "SHORT"
 
@@ -384,7 +431,7 @@ def check_entry(name: str, info: dict) -> dict | None:
             "signals":   signals,
         }
 
-    except Exception as e:
+    except Exception:
         return None
 
 
@@ -456,7 +503,7 @@ def run_once():
         # Circuit Breaker — שלח רק עד המגבלה היומית (Fix באג 1)
         slots_left = MAX_DAILY_TRADES - _circuit["trades_today"]
         if slots_left <= 0:
-            print(f"  [CIRCUIT BREAKER] אין מקום לעסקאות נוספות היום")
+            print("  [CIRCUIT BREAKER] אין מקום לעסקאות נוספות היום")
             return
         # שלח רק signal אחד (הכי חזק) — לא batch שלם
         entries = entries[:1]
@@ -484,7 +531,7 @@ if __name__ == "__main__":
     print("="*50)
     print(f"Entry Monitor פעיל — כל {INTERVAL//60} דקות")
     print(f"נכסים: {len(ASSETS)} | Chat: {CHAT_ID}")
-    print(f"PID: {Path('entry_monitor.pid').read_text() if Path('entry_monitor.pid').exists() else 'N/A'}")
+    print(f"PID: {Path('entry_monitor.pid').read_text(encoding='utf-8') if Path('entry_monitor.pid').exists() else 'N/A'}")
     print("="*50)
     while True:
         run_once()

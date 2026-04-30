@@ -2,11 +2,13 @@
 Daily Review — ועדת חקירה יומית
 רץ כל בוקר, מנתח ביצועי אתמול, שולח דוח לטלגרם
 """
-import sys, os, asyncio, json
+import sys
+import os
+import asyncio
+import json
 from datetime import datetime, timedelta
 from pathlib import Path
 import yfinance as yf
-import pandas as pd
 from dotenv import load_dotenv
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -70,6 +72,72 @@ def log_signal(name, direction, entry, sl, tp):
         "pct":       None,
     })
     save_log(data)
+
+
+def close_signals_auto():
+    """
+    Fix באג 8: סרוק את כל האיתותים הפתוחים, בדוק מול מחיר נוכחי
+    וסמן כסגור אם SL או TP נפגע.
+    """
+    data = load_log()
+    changed = False
+
+    for s in data:
+        if s.get("closed", False):
+            continue
+
+        name = s["name"]
+        ticker_sym = ASSETS.get(name, {}).get("sym")
+        if not ticker_sym:
+            continue
+
+        try:
+            h = yf.Ticker(ticker_sym).history(period="1d", interval="15m")
+            if h.empty or len(h) < 2:
+                continue
+
+            # בדוק את המחיר הנמוך/גבוה של היום מול SL/TP
+            low_day  = round(h["Low"].min(), 4)
+            high_day = round(h["High"].max(), 4)
+
+            entry  = s["entry"]
+            sl     = s["sl"]
+            tp     = s["tp"]
+            closed = False
+            result = None
+            pct    = None
+
+            if s["direction"] == "LONG":
+                if low_day <= sl:
+                    closed = True
+                    result = "LOSS"
+                    pct = round((sl - entry) / entry * 100, 2)
+                elif high_day >= tp:
+                    closed = True
+                    result = "WIN"
+                    pct = round((tp - entry) / entry * 100, 2)
+            else:  # SHORT
+                if high_day >= sl:
+                    closed = True
+                    result = "LOSS"
+                    pct = round((entry - sl) / entry * 100, 2)
+                elif low_day <= tp:
+                    closed = True
+                    result = "WIN"
+                    pct = round((entry - tp) / entry * 100, 2)
+
+            if closed:
+                s["closed"] = True
+                s["result"] = result
+                s["pct"]    = pct
+                changed = True
+                print(f"  [CLOSED] {s['date']} {name} {s['direction']} {result} {pct:+.2f}%")
+        except Exception:
+            pass
+
+    if changed:
+        save_log(data)
+        print("  [AUTO-CLOSE] סגירת איתותים הושלמה")
 
 
 def analyze_yesterday():
@@ -184,6 +252,9 @@ async def send_review(results, wins, vix, bias):
 
 def run():
     print(f"[{datetime.now().strftime('%H:%M')}] ועדת חקירה יומית מתחילה...")
+
+    # סגור אוטומטית signals שהגיעו ל-SL/TP לפני הניתוח
+    close_signals_auto()
 
     results, wins = analyze_yesterday()
     vix           = get_vix()

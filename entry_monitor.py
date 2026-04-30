@@ -519,6 +519,16 @@ def run_once():
 
         asyncio.run(send_alert(entries))
         send_whatsapp_alert(entries)
+
+        # Track 2: שלח לערוצי VIP
+        try:
+            import asyncio as _aio
+            from telegram_vip import send_signal_to_channels, BOT as _vip_bot
+            if _vip_bot:
+                for e in entries:
+                    _aio.run(send_signal_to_channels(_vip_bot, e))
+        except Exception:
+            pass
     else:
         print(f"  -> אין כניסות כרגע. הבא: {INTERVAL//60} דקות")
 

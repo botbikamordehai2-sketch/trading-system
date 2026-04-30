@@ -2,3 +2,9 @@ __pycache__/
 *.pyc
 output/
 *.log
+signals_log.json
+circuit_breaker.lock
+trades_today.txt
+daily_start_equity.txt
+research_cache.json
+research_last_run.txt

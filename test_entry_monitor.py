@@ -106,14 +106,14 @@ class TestCircuitBreaker(unittest.TestCase):
         self.assertEqual(_circuit["trades_today"], 0)
 
     def test_max_trades_block(self):
-        """אחרי 2 עסקאות — חייב להינעל"""
+        """אחרי MAX_DAILY_TRADES עסקאות — חייב להינעל"""
         today = datetime.now().date().isoformat()
-        TRADES_TODAY_FILE.write_text(f"{today}:2", encoding="utf-8")
+        TRADES_TODAY_FILE.write_text(f"{today}:{MAX_DAILY_TRADES}", encoding="utf-8")
         _circuit["date"] = today
-        _circuit["trades_today"] = 2
+        _circuit["trades_today"] = MAX_DAILY_TRADES
 
         result = circuit_breaker_check()
-        self.assertFalse(result, "צריך להיחסם אחרי 2 עסקאות")
+        self.assertFalse(result, f"צריך להיחסם אחרי {MAX_DAILY_TRADES} עסקאות")
         self.assertTrue(LOCK_FILE.exists(), "Lock file צריך להיווצר")
 
     def test_counter_increment(self):
@@ -130,13 +130,13 @@ class TestCircuitBreaker(unittest.TestCase):
         self.assertIn(":1", content, f"צריך להכיל :1, מכיל: {content!r}")
 
     def test_lock_after_max(self):
-        """increment ל-2 צריך לנעול"""
+        """increment ל-MAX_DAILY_TRADES צריך לנעול"""
         today = datetime.now().date().isoformat()
         _circuit["date"] = today
-        _circuit["trades_today"] = 1
+        _circuit["trades_today"] = MAX_DAILY_TRADES - 1
 
-        increment_trade_counter()  # → 2
-        self.assertTrue(LOCK_FILE.exists(), "Lock file צריך להיווצר אחרי 2")
+        increment_trade_counter()  # → MAX
+        self.assertTrue(LOCK_FILE.exists(), f"Lock file צריך להיווצר אחרי {MAX_DAILY_TRADES}")
         result = circuit_breaker_check()
         self.assertFalse(result, "צריך להחזיר False אחרי נעילה")
 
@@ -292,17 +292,18 @@ class TestCircuitBreakerExtra(unittest.TestCase):
         self.assertEqual(_circuit["trades_today"], 1, "מונה לא ייאפס באמצע יום")
 
     def test_full_day_simulation(self):
-        """סימולציה מלאה: עסקה 1 → עסקה 2 → נעילה → חסימת עסקה 3"""
+        """סימולציה: N-1 עסקאות → מותר → N → נעילה → N+1 חסום"""
         today = datetime.now().date().isoformat()
         _circuit["date"] = today
+        _circuit["trades_today"] = MAX_DAILY_TRADES - 2
 
         self.assertTrue(circuit_breaker_check())
         increment_trade_counter()
-        self.assertEqual(_circuit["trades_today"], 1)
+        self.assertEqual(_circuit["trades_today"], MAX_DAILY_TRADES - 1)
 
         self.assertTrue(circuit_breaker_check())
         increment_trade_counter()
-        self.assertEqual(_circuit["trades_today"], 2)
+        self.assertEqual(_circuit["trades_today"], MAX_DAILY_TRADES)
         self.assertTrue(LOCK_FILE.exists())
 
         self.assertFalse(circuit_breaker_check())

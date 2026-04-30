@@ -76,7 +76,7 @@ alerted = {}   # מניעת כפילויות: {asset: last_signal}
 _news_cache = {"time": 0, "events": []}  # cache ל-15 דקות
 
 # ── Circuit Breaker (HARD LOCK) ─────────────────────────────
-MAX_DAILY_TRADES     = 2      # מקסימום עסקאות ביום
+MAX_DAILY_TRADES     = 50     # ללא הגבלה מעשית — drawdown_check() מגן
 DAILY_PROFIT_TARGET  = 100   # $ — עצור אם הרווח היומי הושג
 DAILY_DRAWDOWN_LIMIT = 4.0   # % — Blueberry Funded: daily drawdown limit
 LOCK_FILE            = Path(__file__).parent / "circuit_breaker.lock"
@@ -500,14 +500,6 @@ def run_once():
             print(f"  {name:10} — אין סיגנל")
 
     if entries:
-        # Circuit Breaker — שלח רק עד המגבלה היומית (Fix באג 1)
-        slots_left = MAX_DAILY_TRADES - _circuit["trades_today"]
-        if slots_left <= 0:
-            print("  [CIRCUIT BREAKER] אין מקום לעסקאות נוספות היום")
-            return
-        # שלח רק signal אחד (הכי חזק) — לא batch שלם
-        entries = entries[:1]
-
         for e in entries:
             write_mt5_signal(e["name"], e["direction"])
             increment_trade_counter()  # Fix באג 1: עדכן מונה לאחר כל signal

@@ -9,6 +9,7 @@
 #include <Trade\PositionInfo.mqh>
 
 //--- פרמטרים
+input string InpStrategyFolder = "s1_classic"; // Strategy folder (s1_classic / s2_aggressive / s3_momentum / s4_no_rsi_dir / s5_trend_follow)
 input double InpRisk         = 1.0;    // ריסק לעסקה (%)
 input int    InpRSIPeriod    = 14;     // RSI Period
 input int    InpMAPeriod     = 20;     // MA Period
@@ -224,7 +225,7 @@ void CheckBridgeSignal(string sym)
 {
     if(HasPosition(sym)) return;
 
-    string filename = "signal_" + sym + ".txt";
+    string filename = InpStrategyFolder + "\\signal_" + sym + ".txt";
     int handle = FileOpen(filename, FILE_READ|FILE_COMMON|FILE_TXT|FILE_ANSI);
     if(handle == INVALID_HANDLE) return;
 

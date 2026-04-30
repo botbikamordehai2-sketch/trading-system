@@ -1219,5 +1219,82 @@
     "closed": false,
     "result": null,
     "pct": null
+  },
+  {
+    "date": "2026-04-30 05:27",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.348,
+    "sl": 1.3486,
+    "tp": 1.3468,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-04-30 05:27",
+    "name": "USDCHF",
+    "direction": "LONG",
+    "entry": 0.7912,
+    "sl": 0.7906,
+    "tp": 0.7924,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-04-30 05:27",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9744,
+    "sl": 0.9724,
+    "tp": 0.9783,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-04-30 05:43",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4580.6001,
+    "sl": 4568.1073,
+    "tp": 4605.5856,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-04-30 05:43",
+    "name": "USDCAD",
+    "direction": "LONG",
+    "entry": 1.368,
+    "sl": 1.3668,
+    "tp": 1.3704,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-04-30 05:58",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 72.71,
+    "sl": 72.246,
+    "tp": 73.6379,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-04-30 06:13",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3675,
+    "sl": 1.3687,
+    "tp": 1.3651,
+    "closed": false,
+    "result": null,
+    "pct": null
   }
 ]

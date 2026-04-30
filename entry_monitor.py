@@ -72,11 +72,13 @@ alerted = {}   # מניעת כפילויות: {asset: last_signal}
 _news_cache = {"time": 0, "events": []}  # cache ל-15 דקות
 
 # ── Circuit Breaker (HARD LOCK) ─────────────────────────────
-MAX_DAILY_TRADES  = 2      # מקסימום עסקאות ביום
-DAILY_PROFIT_TARGET = 100  # $ — עצור אם הרווח היומי הושג
-LOCK_FILE         = Path(__file__).parent / "circuit_breaker.lock"
-TRADES_TODAY_FILE = Path(__file__).parent / "trades_today.txt"
-PID_FILE          = Path(__file__).parent / "entry_monitor.pid"
+MAX_DAILY_TRADES     = 2      # מקסימום עסקאות ביום
+DAILY_PROFIT_TARGET  = 100   # $ — עצור אם הרווח היומי הושג
+DAILY_DRAWDOWN_LIMIT = 4.0   # % — Blueberry Funded: daily drawdown limit
+LOCK_FILE            = Path(__file__).parent / "circuit_breaker.lock"
+TRADES_TODAY_FILE    = Path(__file__).parent / "trades_today.txt"
+DAILY_EQUITY_FILE    = Path(__file__).parent / "daily_start_equity.txt"
+PID_FILE             = Path(__file__).parent / "entry_monitor.pid"
 _circuit = {"date": None, "trades_today": 0}
 
 
@@ -175,6 +177,50 @@ def increment_trade_counter():
     if _circuit["trades_today"] >= MAX_DAILY_TRADES:
         LOCK_FILE.write_text(f"LOCKED:{today}:{_circuit['trades_today']} trades")
         print(f"  [CIRCUIT BREAKER — LOCKED] {_circuit['trades_today']}/{MAX_DAILY_TRADES} — נעול עד חצות")
+
+
+def drawdown_check() -> bool:
+    """Blueberry Funded: עצור אם daily drawdown הגיע ל-4%.
+    קורא equity ישירות מ-MetaTrader5 API."""
+    today = datetime.now().date().isoformat()
+    current_equity = None
+
+    try:
+        import MetaTrader5 as mt5
+        if mt5.initialize():
+            info = mt5.account_info()
+            mt5.shutdown()
+            if info:
+                current_equity = info.equity
+    except Exception:
+        pass
+
+    if current_equity is None:
+        return True  # לא נגיש — לא חוסמים
+
+    # שמור/טען equity בתחילת היום
+    start_equity = current_equity
+    if DAILY_EQUITY_FILE.exists():
+        content = DAILY_EQUITY_FILE.read_text().strip()
+        if ":" in content:
+            file_date, val = content.split(":", 1)
+            if file_date == today:
+                start_equity = float(val)
+            else:
+                DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}")
+    else:
+        DAILY_EQUITY_FILE.write_text(f"{today}:{current_equity:.2f}")
+
+    if start_equity <= 0:
+        return True
+
+    dd_pct = (start_equity - current_equity) / start_equity * 100
+    print(f"  [DD] Drawdown יומי: -{dd_pct:.2f}% (גבול: {DAILY_DRAWDOWN_LIMIT}%)")
+
+    if dd_pct >= DAILY_DRAWDOWN_LIMIT:
+        print(f"  [DRAWDOWN BLOCK] -{dd_pct:.1f}% — עוצר מסחר להיום! (Blueberry limit)")
+        return False
+    return True
 
 
 def get_high_impact_news(within_hours: int = 2) -> str | None:
@@ -392,6 +438,8 @@ def run_once():
 
     if not circuit_breaker_check():
         return
+    if not drawdown_check():
+        return
     if not session_filter_check():
         return
 
@@ -440,5 +488,4 @@ if __name__ == "__main__":
     print("="*50)
     while True:
         run_once()
-        time.sleep(INTERVAL)
         time.sleep(INTERVAL)

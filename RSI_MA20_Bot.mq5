@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//| RSI_MA20_Bot.mq5 — FTMO Demo Challenge                          |
+//| RSI_MA20_Bot.mq5 — Blueberry Funded                             |
 //| אסטרטגיה: RSI(14) + MA20 על M15                                 |
 //| LONG: RSI<30 | SHORT: RSI>70 | ריסק: 1% לעסקה                  |
 //+------------------------------------------------------------------+
@@ -14,8 +14,9 @@ input int    InpRSIPeriod    = 14;     // RSI Period
 input int    InpMAPeriod     = 20;     // MA Period
 input int    InpMA50Period   = 50;     // MA50 Period (טרנד)
 input int    InpSLPips       = 30;     // Stop Loss (pips)
-input double InpMaxDailyLoss = 4.5;   // מקסימום הפסד יומי (%) — FTMO
-input double InpMaxDrawdown  = 9.0;   // מקסימום drawdown (%) — FTMO
+input double InpMaxDailyLoss = 3.8;   // מקסימום הפסד יומי (%) — Blueberry limit 4%
+input double InpMaxDrawdown  = 9.0;   // מקסימום drawdown (%) — Blueberry static
+input double InpMinMarginPct = 150.0; // מינימום Margin Level (%) — Blueberry rule
 input int    InpMagic        = 202600; // Magic Number
 input int    InpSessionStart = 0;      // סשן התחלה (UTC)
 input int    InpSessionEnd   = 24;     // סשן סיום (UTC)
@@ -90,7 +91,15 @@ bool FTMOGuard()
     double dd = (g_InitialBalance - equity) / g_InitialBalance * 100.0;
     if(dd >= InpMaxDrawdown)
     {
-        Print("FTMO STOP: Drawdown ", DoubleToString(dd,2), "% — עוצר הבוט!");
+        Print("BLUEBERRY STOP: Drawdown ", DoubleToString(dd,2), "% — עוצר הבוט!");
+        return false;
+    }
+
+    // בדיקת Margin Level — Blueberry דורשים > 150%
+    double marginLevel = AccountInfoDouble(ACCOUNT_MARGIN_LEVEL);
+    if(marginLevel > 0 && marginLevel < InpMinMarginPct)
+    {
+        Print("BLUEBERRY STOP: Margin Level ", DoubleToString(marginLevel,1), "% — מתחת ל-", InpMinMarginPct, "%!");
         return false;
     }
 

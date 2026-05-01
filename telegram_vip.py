@@ -30,9 +30,9 @@ ADMIN_CHAT  = os.getenv("ALL_CHAT_ID", "1246833993")
 
 # ── Payment Config ──────────────────────────────────────────
 VIP_PRICE_MONTHLY = 29     # $
-KO_FI_LINK        = "https://ko-fi.com/yourname"     # עדכן
-PATREON_LINK      = "https://patreon.com/yourname"   # עדכן
-BUYMEACOFFEE_LINK = "https://buymeacoffee.com/yourname"
+KO_FI_LINK        = "https://ko-fi.com/mordehaibotbika23381"
+PATREON_LINK      = ""   # optional
+BUYMEACOFFEE_LINK = ""   # optional
 
 # ── VIP Subscribers ─────────────────────────────────────────
 VIP_FILE = Path(__file__).parent / "vip_subscribers.json"

@@ -148,14 +148,38 @@ def _detect_sweep(df: pd.DataFrame):
                 return "BULL", ll
     return None, None
 
-def _confirm_mss(df: pd.DataFrame, sweep: str) -> bool:
-    """MSS on H1: last close breaks beyond the previous candle's range."""
-    if len(df) < 3: return False
+def _confirm_mss(df: pd.DataFrame, sweep: str, vol_mult: float = 1.5) -> bool:
+    """
+    MSS on H1: close breaks previous candle's range AND volume > vol_mult × MA20.
+    Volume spike confirms institutional participation (not retail Inducement).
+    """
+    if len(df) < 23: return False
+
     cur  = df.iloc[-1]
     prev = df.iloc[-2]
-    if sweep == "BULL": return float(cur["Close"]) > float(prev["High"])
-    if sweep == "BEAR": return float(cur["Close"]) < float(prev["Low"])
-    return False
+
+    # ── Price break ───────────────────────────────────────────
+    if sweep == "BULL":
+        price_break = float(cur["Close"]) > float(prev["High"])
+    elif sweep == "BEAR":
+        price_break = float(cur["Close"]) < float(prev["Low"])
+    else:
+        return False
+
+    if not price_break:
+        return False
+
+    # ── Volume confirmation ───────────────────────────────────
+    if "Volume" not in df.columns:
+        return True                          # no volume data → price break only
+
+    vol_now = float(df["Volume"].iloc[-1])
+    vol_avg = float(df["Volume"].iloc[-21:-1].mean())   # MA20 (bars 2-21)
+
+    if vol_avg == 0:
+        return True                          # avoid division by zero
+
+    return vol_now >= vol_avg * vol_mult
 
 def _has_fvg(df: pd.DataFrame, sweep: str, lookback: int = 8) -> bool:
     """Regular FVG (wick gap) or IFVG (body gap + opposite middle candle)."""

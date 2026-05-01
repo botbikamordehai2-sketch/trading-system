@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-05-01 21:48:03",
+  "generated_by": "Claude API (daily_bias_ai.py — Path 1 Macro Sync)",
+  "bias": "BEARISH",
+  "confidence": 0.72,
+  "reasoning": "כל האינדיקטורים המרכזיים — DXY, VIX, NDX — מציגים ציון חלש של 1/3 עם הטיה דובית, ותשואת האג\"ח ל-10 שנים עולה, מה שמגביר לחץ על מניות הטכנולוגיה ומחזק את הסנטימנט השלילי בשוק.",
+  "risk_level": "MEDIUM",
+  "killzone_advice": "CAUTION",
+  "pairs_to_focus": [
+    "XAUUSD",
+    "EURUSD"
+  ]
+}

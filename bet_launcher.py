@@ -104,13 +104,16 @@ def run_scan():
         # set env var temporarly
         os.environ["ODDS_API_KEY"] = "demo"
 
-    print(f"🔍 מריץ: {scan_loop}")
+    # Run arb_finder.py directly (scan_loop.py is a scheduler, not a one-shot scanner)
+    arb_finder = BET_SCANNER_DIR / "arb_finder.py"
+    target = arb_finder if arb_finder.exists() else scan_loop
+    print(f"🔍 מריץ: {target}")
     result = subprocess.run(
-        [sys.executable, str(scan_loop)],
+        [sys.executable, str(target)],
         cwd=str(BET_SCANNER_DIR),
         capture_output=True,
         text=True,
-        timeout=120,
+        timeout=60,
     )
 
     if result.returncode == 0:

@@ -47,6 +47,12 @@ AFFILIATE_PROGRAMS = {
         "commission": "4-10%",
         "niche": "Trading Education Books",
     },
+    "hostinger": {
+        "name": "Hostinger",
+        "url": "https://www.hostinger.com?REFERRALCODE=4GUBOTBIKXVG",
+        "commission": "Up to $230 per referral",
+        "niche": "Web Hosting / WordPress",
+    },
 }
 
 # ── Newsletter Template ─────────────────────────────────────

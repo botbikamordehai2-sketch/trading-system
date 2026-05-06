@@ -6,9 +6,9 @@
     "entry": 73.52,
     "sl": 73.7938,
     "tp": 72.9725,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.37
   },
   {
     "date": "2026-04-28 23:54",
@@ -17,9 +17,9 @@
     "entry": 99.6,
     "sl": 100.1196,
     "tp": 98.5608,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.52
   },
   {
     "date": "2026-04-28 23:54",
@@ -28,9 +28,9 @@
     "entry": 1.1718,
     "sl": 1.1713,
     "tp": 1.1727,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
   },
   {
     "date": "2026-04-28 23:54",
@@ -39,9 +39,9 @@
     "entry": 0.7891,
     "sl": 0.7896,
     "tp": 0.7882,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
   },
   {
     "date": "2026-04-28 23:54",
@@ -50,9 +50,9 @@
     "entry": 1.3684,
     "sl": 1.3672,
     "tp": 1.3708,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-28 23:54",
@@ -61,9 +61,9 @@
     "entry": 0.7185,
     "sl": 0.7182,
     "tp": 0.7191,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
   },
   {
     "date": "2026-04-28 23:54",
@@ -72,9 +72,9 @@
     "entry": 1.2203,
     "sl": 1.2194,
     "tp": 1.2221,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
   },
   {
     "date": "2026-04-28 23:54",
@@ -83,9 +83,9 @@
     "entry": 0.9827,
     "sl": 0.9809,
     "tp": 0.9863,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
   },
   {
     "date": "2026-04-28 23:54",
@@ -94,9 +94,9 @@
     "entry": 114.63,
     "sl": 114.5722,
     "tp": 114.7455,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
   },
   {
     "date": "2026-04-29 07:52",
@@ -105,9 +105,9 @@
     "entry": 74.28,
     "sl": 73.8948,
     "tp": 75.0504,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.52
   },
   {
     "date": "2026-04-29 07:52",
@@ -116,9 +116,9 @@
     "entry": 1.1711,
     "sl": 1.1716,
     "tp": 1.1702,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.08
   },
   {
     "date": "2026-04-29 07:52",
@@ -127,9 +127,9 @@
     "entry": 1.3514,
     "sl": 1.352,
     "tp": 1.3502,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.09
   },
   {
     "date": "2026-04-29 07:52",
@@ -138,9 +138,9 @@
     "entry": 159.632,
     "sl": 159.5652,
     "tp": 159.7655,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
   },
   {
     "date": "2026-04-29 07:52",
@@ -149,9 +149,9 @@
     "entry": 1.2217,
     "sl": 1.2199,
     "tp": 1.2253,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
   },
   {
     "date": "2026-04-29 18:12",
@@ -160,9 +160,9 @@
     "entry": 7126.1899,
     "sl": 7138.088,
     "tp": 7102.3936,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-29 18:12",
@@ -171,9 +171,9 @@
     "entry": 4557.5,
     "sl": 4577.0644,
     "tp": 4518.3713,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.43
   },
   {
     "date": "2026-04-29 18:12",
@@ -182,9 +182,9 @@
     "entry": 72.41,
     "sl": 72.9644,
     "tp": 71.3012,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
   },
   {
     "date": "2026-04-29 18:12",
@@ -193,9 +193,9 @@
     "entry": 1.17,
     "sl": 1.1709,
     "tp": 1.1682,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-29 18:12",
@@ -204,9 +204,9 @@
     "entry": 1.349,
     "sl": 1.3502,
     "tp": 1.3466,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-29 18:12",
@@ -215,9 +215,9 @@
     "entry": 1.3683,
     "sl": 1.3701,
     "tp": 1.3647,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.26
   },
   {
     "date": "2026-04-29 18:12",
@@ -226,9 +226,9 @@
     "entry": 1.2214,
     "sl": 1.2229,
     "tp": 1.2184,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.25
   },
   {
     "date": "2026-04-29 18:12",
@@ -237,9 +237,9 @@
     "entry": 114.253,
     "sl": 114.4062,
     "tp": 113.9467,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 18:16",
@@ -248,9 +248,9 @@
     "entry": 27110.3594,
     "sl": 27044.5984,
     "tp": 27241.8815,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.24
   },
   {
     "date": "2026-04-29 18:16",
@@ -259,9 +259,9 @@
     "entry": 7128.2002,
     "sl": 7140.0919,
     "tp": 7104.4168,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-29 18:16",
@@ -270,9 +270,9 @@
     "entry": 4555.8999,
     "sl": 4575.5714,
     "tp": 4516.557,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.43
   },
   {
     "date": "2026-04-29 18:16",
@@ -281,9 +281,9 @@
     "entry": 1.1699,
     "sl": 1.1708,
     "tp": 1.1681,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-29 18:16",
@@ -292,9 +292,9 @@
     "entry": 1.3488,
     "sl": 1.35,
     "tp": 1.3464,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-29 18:16",
@@ -303,9 +303,9 @@
     "entry": 0.79,
     "sl": 0.789,
     "tp": 0.7921,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 18:16",
@@ -314,9 +314,9 @@
     "entry": 1.2213,
     "sl": 1.2228,
     "tp": 1.2183,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.25
   },
   {
     "date": "2026-04-29 18:16",
@@ -325,9 +325,9 @@
     "entry": 114.248,
     "sl": 114.3994,
     "tp": 113.9453,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 18:17",
@@ -336,9 +336,9 @@
     "entry": 27117.832,
     "sl": 27051.1408,
     "tp": 27251.2144,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
   },
   {
     "date": "2026-04-29 18:17",
@@ -347,9 +347,9 @@
     "entry": 7129.9399,
     "sl": 7142.018,
     "tp": 7105.7836,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-29 18:17",
@@ -358,9 +358,9 @@
     "entry": 4557.5,
     "sl": 4577.1714,
     "tp": 4518.1571,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.43
   },
   {
     "date": "2026-04-29 18:17",
@@ -369,9 +369,9 @@
     "entry": 1.17,
     "sl": 1.1709,
     "tp": 1.1682,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-29 18:17",
@@ -380,9 +380,9 @@
     "entry": 1.349,
     "sl": 1.3502,
     "tp": 1.3466,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-29 18:17",
@@ -391,9 +391,9 @@
     "entry": 1.3679,
     "sl": 1.3697,
     "tp": 1.3643,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.26
   },
   {
     "date": "2026-04-29 18:17",
@@ -402,9 +402,9 @@
     "entry": 1.2214,
     "sl": 1.2229,
     "tp": 1.2184,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.25
   },
   {
     "date": "2026-04-29 18:17",
@@ -413,9 +413,9 @@
     "entry": 114.269,
     "sl": 114.4226,
     "tp": 113.9618,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 18:17",
@@ -424,9 +424,9 @@
     "entry": 27122.8125,
     "sl": 27055.7172,
     "tp": 27257.0031,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
   },
   {
     "date": "2026-04-29 18:17",
@@ -435,9 +435,9 @@
     "entry": 7130.8799,
     "sl": 7143.0587,
     "tp": 7106.5223,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-29 18:17",
@@ -446,9 +446,9 @@
     "entry": 4557.1001,
     "sl": 4576.7715,
     "tp": 4517.7572,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.43
   },
   {
     "date": "2026-04-29 18:17",
@@ -457,9 +457,9 @@
     "entry": 1.17,
     "sl": 1.1709,
     "tp": 1.1682,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-29 18:17",
@@ -468,9 +468,9 @@
     "entry": 1.3491,
     "sl": 1.3504,
     "tp": 1.3464,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 18:17",
@@ -479,9 +479,9 @@
     "entry": 1.3679,
     "sl": 1.3697,
     "tp": 1.3643,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.26
   },
   {
     "date": "2026-04-29 18:17",
@@ -490,9 +490,9 @@
     "entry": 1.2213,
     "sl": 1.2228,
     "tp": 1.2183,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.25
   },
   {
     "date": "2026-04-29 18:17",
@@ -501,9 +501,9 @@
     "entry": 114.262,
     "sl": 114.4148,
     "tp": 113.9563,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 18:20",
@@ -512,9 +512,9 @@
     "entry": 27131.0488,
     "sl": 27063.071,
     "tp": 27267.0043,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
   },
   {
     "date": "2026-04-29 18:20",
@@ -523,9 +523,9 @@
     "entry": 7130.7798,
     "sl": 7143.0369,
     "tp": 7106.2656,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-29 18:20",
@@ -534,9 +534,9 @@
     "entry": 4552.5,
     "sl": 4572.1714,
     "tp": 4513.1571,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.43
   },
   {
     "date": "2026-04-29 18:20",
@@ -545,9 +545,9 @@
     "entry": 1.17,
     "sl": 1.1709,
     "tp": 1.1682,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-29 18:20",
@@ -556,9 +556,9 @@
     "entry": 1.3492,
     "sl": 1.3506,
     "tp": 1.3465,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 18:20",
@@ -567,9 +567,9 @@
     "entry": 1.3676,
     "sl": 1.3694,
     "tp": 1.364,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.26
   },
   {
     "date": "2026-04-29 18:20",
@@ -578,9 +578,9 @@
     "entry": 1.2215,
     "sl": 1.223,
     "tp": 1.2185,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.25
   },
   {
     "date": "2026-04-29 18:20",
@@ -589,9 +589,9 @@
     "entry": 114.291,
     "sl": 114.4474,
     "tp": 113.9781,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.27
   },
   {
     "date": "2026-04-29 21:38",
@@ -600,9 +600,9 @@
     "entry": 7115.8501,
     "sl": 7130.039,
     "tp": 7087.4722,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.2
   },
   {
     "date": "2026-04-29 21:38",
@@ -611,9 +611,9 @@
     "entry": 4545.5,
     "sl": 4564.4536,
     "tp": 4507.5929,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.42
   },
   {
     "date": "2026-04-29 21:38",
@@ -622,9 +622,9 @@
     "entry": 1.347,
     "sl": 1.3484,
     "tp": 1.3443,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 21:38",
@@ -633,9 +633,9 @@
     "entry": 160.357,
     "sl": 160.1934,
     "tp": 160.6843,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 21:38",
@@ -644,9 +644,9 @@
     "entry": 1.3687,
     "sl": 1.3669,
     "tp": 1.3723,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 21:38",
@@ -655,9 +655,9 @@
     "entry": 0.7119,
     "sl": 0.7128,
     "tp": 0.7101,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 21:38",
@@ -666,9 +666,9 @@
     "entry": 1.221,
     "sl": 1.222,
     "tp": 1.2189,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-29 21:38",
@@ -688,9 +688,9 @@
     "entry": 27121.5117,
     "sl": 27045.705,
     "tp": 27273.1251,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
   },
   {
     "date": "2026-04-29 21:54",
@@ -699,9 +699,9 @@
     "entry": 71.55,
     "sl": 72.0112,
     "tp": 70.6275,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.64
   },
   {
     "date": "2026-04-29 22:09",
@@ -710,9 +710,9 @@
     "entry": 106.84,
     "sl": 105.776,
     "tp": 108.9679,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 1.99
   },
   {
     "date": "2026-04-29 22:24",
@@ -721,9 +721,9 @@
     "entry": 7135.0801,
     "sl": 7120.1818,
     "tp": 7164.8767,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.21
   },
   {
     "date": "2026-04-29 22:24",
@@ -732,9 +732,9 @@
     "entry": 0.791,
     "sl": 0.7898,
     "tp": 0.7934,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
   },
   {
     "date": "2026-04-29 22:24",
@@ -743,9 +743,9 @@
     "entry": 0.9737,
     "sl": 0.9761,
     "tp": 0.9689,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
   },
   {
     "date": "2026-04-29 22:24",
@@ -754,9 +754,9 @@
     "entry": 114.092,
     "sl": 114.2586,
     "tp": 113.7587,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
   },
   {
     "date": "2026-04-29 22:54",
@@ -765,9 +765,9 @@
     "entry": 1.168,
     "sl": 1.169,
     "tp": 1.1659,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-29 23:39",
@@ -776,9 +776,9 @@
     "entry": 4557.3999,
     "sl": 4576.4928,
     "tp": 4519.2141,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.42
   },
   {
     "date": "2026-04-29 23:39",
@@ -787,9 +787,9 @@
     "entry": 1.3477,
     "sl": 1.349,
     "tp": 1.345,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 23:39",
@@ -798,9 +798,9 @@
     "entry": 160.408,
     "sl": 160.2451,
     "tp": 160.7338,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 23:39",
@@ -809,9 +809,9 @@
     "entry": 1.3678,
     "sl": 1.3694,
     "tp": 1.3645,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.24
   },
   {
     "date": "2026-04-29 23:39",
@@ -820,9 +820,9 @@
     "entry": 0.7121,
     "sl": 0.713,
     "tp": 0.7103,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-29 23:39",
@@ -831,9 +831,9 @@
     "entry": 1.2207,
     "sl": 1.2219,
     "tp": 1.2183,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-29 23:55",
@@ -842,9 +842,9 @@
     "entry": 71.835,
     "sl": 72.3177,
     "tp": 70.8696,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.67
   },
   {
     "date": "2026-04-30 00:10",
@@ -853,9 +853,9 @@
     "entry": 0.7902,
     "sl": 0.7914,
     "tp": 0.7878,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
   },
   {
     "date": "2026-04-30 00:10",
@@ -864,9 +864,9 @@
     "entry": 1.3683,
     "sl": 1.3667,
     "tp": 1.3716,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.12
   },
   {
     "date": "2026-04-30 00:25",
@@ -875,9 +875,9 @@
     "entry": 7137.5601,
     "sl": 7122.1604,
     "tp": 7168.3596,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 00:25",
@@ -886,9 +886,9 @@
     "entry": 0.5622,
     "sl": 0.5639,
     "tp": 0.5589,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.3
   },
   {
     "date": "2026-04-30 00:25",
@@ -897,9 +897,9 @@
     "entry": 113.979,
     "sl": 114.1714,
     "tp": 113.5941,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-30 00:40",
@@ -908,9 +908,9 @@
     "entry": 0.9732,
     "sl": 0.9753,
     "tp": 0.969,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 01:10",
@@ -919,9 +919,9 @@
     "entry": 1.1677,
     "sl": 1.1686,
     "tp": 1.1659,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 01:10",
@@ -930,9 +930,9 @@
     "entry": 0.7915,
     "sl": 0.7902,
     "tp": 0.7942,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.16
   },
   {
     "date": "2026-04-30 01:25",
@@ -941,9 +941,9 @@
     "entry": 107.84,
     "sl": 106.8746,
     "tp": 109.7708,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.9
   },
   {
     "date": "2026-04-30 01:40",
@@ -952,9 +952,9 @@
     "entry": 4562.2002,
     "sl": 4546.686,
     "tp": 4593.2286,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.68
   },
   {
     "date": "2026-04-30 01:40",
@@ -963,9 +963,9 @@
     "entry": 1.3678,
     "sl": 1.369,
     "tp": 1.3654,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.18
   },
   {
     "date": "2026-04-30 01:56",
@@ -985,9 +985,9 @@
     "entry": 1.3479,
     "sl": 1.3492,
     "tp": 1.3452,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 02:11",
@@ -996,9 +996,9 @@
     "entry": 160.32,
     "sl": 160.1559,
     "tp": 160.6482,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 02:11",
@@ -1007,9 +1007,9 @@
     "entry": 0.7121,
     "sl": 0.713,
     "tp": 0.7103,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-30 02:26",
@@ -1018,9 +1018,9 @@
     "entry": 7137.5601,
     "sl": 7122.1604,
     "tp": 7168.3596,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 02:26",
@@ -1029,9 +1029,9 @@
     "entry": 114.128,
     "sl": 114.2752,
     "tp": 113.8337,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
   },
   {
     "date": "2026-04-30 03:11",
@@ -1040,9 +1040,9 @@
     "entry": 72.36,
     "sl": 72.1098,
     "tp": 72.8604,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.35
   },
   {
     "date": "2026-04-30 03:11",
@@ -1051,9 +1051,9 @@
     "entry": 0.7903,
     "sl": 0.7915,
     "tp": 0.7879,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
   },
   {
     "date": "2026-04-30 03:42",
@@ -1062,9 +1062,9 @@
     "entry": 160.17,
     "sl": 160.287,
     "tp": 159.936,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
   },
   {
     "date": "2026-04-30 03:42",
@@ -1084,9 +1084,9 @@
     "entry": 1.3486,
     "sl": 1.348,
     "tp": 1.3498,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
   },
   {
     "date": "2026-04-30 03:57",
@@ -1095,9 +1095,9 @@
     "entry": 1.3674,
     "sl": 1.3684,
     "tp": 1.3653,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
   },
   {
     "date": "2026-04-30 03:57",
@@ -1106,9 +1106,9 @@
     "entry": 1.2199,
     "sl": 1.222,
     "tp": 1.2157,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
   },
   {
     "date": "2026-04-30 04:12",
@@ -1117,9 +1117,9 @@
     "entry": 160.295,
     "sl": 160.1643,
     "tp": 160.5563,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 04:12",
@@ -1128,9 +1128,9 @@
     "entry": 0.7121,
     "sl": 0.7125,
     "tp": 0.7112,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
   },
   {
     "date": "2026-04-30 04:12",
@@ -1139,9 +1139,9 @@
     "entry": 0.9735,
     "sl": 0.9753,
     "tp": 0.9699,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
   },
   {
     "date": "2026-04-30 04:27",
@@ -1150,9 +1150,9 @@
     "entry": 7137.5601,
     "sl": 7122.1604,
     "tp": 7168.3596,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 04:42",
@@ -1161,9 +1161,9 @@
     "entry": 1.2216,
     "sl": 1.2204,
     "tp": 1.224,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 04:57",
@@ -1172,9 +1172,9 @@
     "entry": 107.2,
     "sl": 106.5218,
     "tp": 108.5563,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.63
   },
   {
     "date": "2026-04-30 04:57",
@@ -1183,9 +1183,9 @@
     "entry": 1.168,
     "sl": 1.1686,
     "tp": 1.1668,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
   },
   {
     "date": "2026-04-30 04:57",
@@ -1194,9 +1194,9 @@
     "entry": 0.7128,
     "sl": 0.7124,
     "tp": 0.7137,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
   },
   {
     "date": "2026-04-30 04:57",
@@ -1205,9 +1205,9 @@
     "entry": 0.5635,
     "sl": 0.5622,
     "tp": 0.5662,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.23
   },
   {
     "date": "2026-04-30 04:57",
@@ -1216,9 +1216,9 @@
     "entry": 114.168,
     "sl": 114.0567,
     "tp": 114.3906,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 05:27",
@@ -1227,9 +1227,9 @@
     "entry": 1.348,
     "sl": 1.3486,
     "tp": 1.3468,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
   },
   {
     "date": "2026-04-30 05:27",
@@ -1238,9 +1238,9 @@
     "entry": 0.7912,
     "sl": 0.7906,
     "tp": 0.7924,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 05:27",
@@ -1249,9 +1249,9 @@
     "entry": 0.9744,
     "sl": 0.9724,
     "tp": 0.9783,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.21
   },
   {
     "date": "2026-04-30 05:43",
@@ -1260,9 +1260,9 @@
     "entry": 4580.6001,
     "sl": 4568.1073,
     "tp": 4605.5856,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.27
   },
   {
     "date": "2026-04-30 05:43",
@@ -1271,9 +1271,9 @@
     "entry": 1.368,
     "sl": 1.3668,
     "tp": 1.3704,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-30 05:58",
@@ -1282,9 +1282,9 @@
     "entry": 72.71,
     "sl": 72.246,
     "tp": 73.6379,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.64
   },
   {
     "date": "2026-04-30 06:13",
@@ -1293,9 +1293,9 @@
     "entry": 1.3675,
     "sl": 1.3687,
     "tp": 1.3651,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-30 06:28",
@@ -1304,9 +1304,9 @@
     "entry": 7137.5601,
     "sl": 7122.1604,
     "tp": 7168.3596,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 06:28",
@@ -1315,9 +1315,9 @@
     "entry": 160.374,
     "sl": 160.2457,
     "tp": 160.6305,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 06:58",
@@ -1326,9 +1326,9 @@
     "entry": 0.564,
     "sl": 0.5625,
     "tp": 0.567,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.27
   },
   {
     "date": "2026-04-30 07:13",
@@ -1337,9 +1337,9 @@
     "entry": 114.238,
     "sl": 114.1136,
     "tp": 114.4867,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.11
   },
   {
     "date": "2026-04-30 07:29",
@@ -1348,9 +1348,9 @@
     "entry": 0.712,
     "sl": 0.7126,
     "tp": 0.7108,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 07:44",
@@ -1359,9 +1359,9 @@
     "entry": 1.2211,
     "sl": 1.2199,
     "tp": 1.2235,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 07:59",
@@ -1370,9 +1370,9 @@
     "entry": 1.3686,
     "sl": 1.3674,
     "tp": 1.371,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-30 07:59",
@@ -1381,9 +1381,9 @@
     "entry": 0.9738,
     "sl": 0.9758,
     "tp": 0.9699,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.21
   },
   {
     "date": "2026-04-30 08:14",
@@ -1392,9 +1392,9 @@
     "entry": 0.7915,
     "sl": 0.7909,
     "tp": 0.7927,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 08:29",
@@ -1403,9 +1403,9 @@
     "entry": 7137.5601,
     "sl": 7122.1604,
     "tp": 7168.3596,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 08:29",
@@ -1414,9 +1414,9 @@
     "entry": 72.32,
     "sl": 71.9594,
     "tp": 73.0412,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "WIN",
+    "pct": 1.0
   },
   {
     "date": "2026-04-30 08:44",
@@ -1425,9 +1425,9 @@
     "entry": 109.07,
     "sl": 107.8475,
     "tp": 111.515,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -1.12
   },
   {
     "date": "2026-04-30 08:59",
@@ -1436,9 +1436,9 @@
     "entry": 4578.2998,
     "sl": 4566.4498,
     "tp": 4601.9998,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.26
   },
   {
     "date": "2026-04-30 09:14",
@@ -1447,9 +1447,9 @@
     "entry": 1.1663,
     "sl": 1.1669,
     "tp": 1.1651,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
   },
   {
     "date": "2026-04-30 09:14",
@@ -1458,9 +1458,9 @@
     "entry": 114.285,
     "sl": 114.1662,
     "tp": 114.5226,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 09:30",
@@ -1469,9 +1469,9 @@
     "entry": 1.3467,
     "sl": 1.3476,
     "tp": 1.3449,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
   },
   {
     "date": "2026-04-30 09:30",
@@ -1480,9 +1480,9 @@
     "entry": 0.7118,
     "sl": 0.7124,
     "tp": 0.7106,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 10:15",
@@ -1491,9 +1491,9 @@
     "entry": 1.3486,
     "sl": 1.3476,
     "tp": 1.3507,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
   },
   {
     "date": "2026-04-30 10:15",
@@ -1502,9 +1502,9 @@
     "entry": 0.7905,
     "sl": 0.7911,
     "tp": 0.7893,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 10:15",
@@ -1513,9 +1513,9 @@
     "entry": 1.3671,
     "sl": 1.3683,
     "tp": 1.3647,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-30 10:15",
@@ -1524,9 +1524,9 @@
     "entry": 0.713,
     "sl": 0.7124,
     "tp": 0.7142,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
   },
   {
     "date": "2026-04-30 10:15",
@@ -1535,9 +1535,9 @@
     "entry": 0.9743,
     "sl": 0.9724,
     "tp": 0.9782,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.2
   },
   {
     "date": "2026-04-30 10:30",
@@ -1546,9 +1546,9 @@
     "entry": 7137.5601,
     "sl": 7122.1604,
     "tp": 7168.3596,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.22
   },
   {
     "date": "2026-04-30 10:45",
@@ -1557,9 +1557,9 @@
     "entry": 160.581,
     "sl": 160.4436,
     "tp": 160.8558,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
   },
   {
     "date": "2026-04-30 10:45",
@@ -1568,9 +1568,9 @@
     "entry": 1.2206,
     "sl": 1.2218,
     "tp": 1.2182,
-    "closed": false,
-    "result": null,
-    "pct": null
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
   },
   {
     "date": "2026-04-30 11:00",
@@ -1579,6 +1579,3284 @@
     "entry": 114.142,
     "sl": 114.302,
     "tp": 113.8219,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.14
+  },
+  {
+    "date": "2026-04-30 15:59",
+    "name": "US500",
+    "direction": "LONG",
+    "entry": 7137.5601,
+    "sl": 7122.1604,
+    "tp": 7168.3596,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.43
+  },
+  {
+    "date": "2026-04-30 16:15",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4653.2002,
+    "sl": 4637.4396,
+    "tp": 4684.7215,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.34
+  },
+  {
+    "date": "2026-04-30 16:15",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 74.185,
+    "sl": 73.8004,
+    "tp": 74.9542,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.52
+  },
+  {
+    "date": "2026-04-30 16:45",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.3513,
+    "sl": 1.3496,
+    "tp": 1.3546,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.24
+  },
+  {
+    "date": "2026-04-30 16:45",
+    "name": "AUDUSD",
+    "direction": "LONG",
+    "entry": 0.7162,
+    "sl": 0.7153,
+    "tp": 0.718,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.25
+  },
+  {
+    "date": "2026-04-30 17:00",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3659,
+    "sl": 1.3677,
+    "tp": 1.3623,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.26
+  },
+  {
+    "date": "2026-04-30 17:00",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2195,
+    "sl": 1.2212,
+    "tp": 1.2162,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.14
+  },
+  {
+    "date": "2026-04-30 17:31",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 104.9,
+    "sl": 106.3894,
+    "tp": 101.9213,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -1.42
+  },
+  {
+    "date": "2026-04-30 17:31",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1716,
+    "sl": 1.1702,
+    "tp": 1.1743,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.12
+  },
+  {
+    "date": "2026-04-30 17:46",
+    "name": "US100",
+    "direction": "LONG",
+    "entry": 27136.416,
+    "sl": 27013.311,
+    "tp": 27382.626,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.91
+  },
+  {
+    "date": "2026-04-30 17:46",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.221,
+    "sl": 1.2192,
+    "tp": 1.2246,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
+  },
+  {
+    "date": "2026-04-30 20:31",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4633.0,
+    "sl": 4618.2892,
+    "tp": 4662.4216,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.32
+  },
+  {
+    "date": "2026-04-30 20:31",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 104.4,
+    "sl": 105.7906,
+    "tp": 101.6187,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -1.33
+  },
+  {
+    "date": "2026-04-30 20:31",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2191,
+    "sl": 1.2204,
+    "tp": 1.2164,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.11
+  },
+  {
+    "date": "2026-04-30 20:31",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 112.414,
+    "sl": 112.596,
+    "tp": 112.0501,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.16
+  },
+  {
+    "date": "2026-04-30 21:01",
+    "name": "AUDUSD",
+    "direction": "LONG",
+    "entry": 0.719,
+    "sl": 0.7184,
+    "tp": 0.7202,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-04-30 21:17",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9781,
+    "sl": 0.9762,
+    "tp": 0.982,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.19
+  },
+  {
+    "date": "2026-04-30 21:17",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5623,
+    "sl": 0.5606,
+    "tp": 0.5656,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.3
+  },
+  {
+    "date": "2026-04-30 21:32",
+    "name": "USDJPY",
+    "direction": "SHORT",
+    "entry": 156.395,
+    "sl": 156.5885,
+    "tp": 156.008,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.12
+  },
+  {
+    "date": "2026-04-30 21:47",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.174,
+    "sl": 1.1732,
+    "tp": 1.1755,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
+  },
+  {
+    "date": "2026-04-30 21:47",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7814,
+    "sl": 0.7822,
+    "tp": 0.7799,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-04-30 22:47",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2186,
+    "sl": 1.2196,
+    "tp": 1.2165,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-04-30 23:02",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4628.8999,
+    "sl": 4640.2462,
+    "tp": 4606.2073,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.49
+  },
+  {
+    "date": "2026-04-30 23:33",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9778,
+    "sl": 0.976,
+    "tp": 0.9814,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
+  },
+  {
+    "date": "2026-04-30 23:33",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5624,
+    "sl": 0.5611,
+    "tp": 0.5651,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.23
+  },
+  {
+    "date": "2026-05-01 00:03",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.56,
+    "sl": 104.5732,
+    "tp": 107.5337,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.93
+  },
+  {
+    "date": "2026-05-01 00:03",
+    "name": "USDJPY",
+    "direction": "SHORT",
+    "entry": 156.479,
+    "sl": 156.6484,
+    "tp": 156.1403,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.11
+  },
+  {
+    "date": "2026-05-01 00:03",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5613,
+    "sl": 0.5626,
+    "tp": 0.5586,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.23
+  },
+  {
+    "date": "2026-05-01 00:18",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4636.0,
+    "sl": 4627.0002,
+    "tp": 4653.9997,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.19
+  },
+  {
+    "date": "2026-05-01 00:18",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1737,
+    "sl": 1.1731,
+    "tp": 1.1749,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
+  },
+  {
+    "date": "2026-05-01 00:48",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2177,
+    "sl": 1.2195,
+    "tp": 1.2141,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
+  },
+  {
+    "date": "2026-05-01 01:34",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5627,
+    "sl": 0.561,
+    "tp": 0.566,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.3
+  },
+  {
+    "date": "2026-05-01 01:49",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3583,
+    "sl": 1.3594,
+    "tp": 1.3562,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-01 02:52",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9779,
+    "sl": 0.9762,
+    "tp": 0.9812,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
+  },
+  {
+    "date": "2026-05-01 03:09",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4639.7998,
+    "sl": 4631.389,
+    "tp": 4656.6214,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
+  },
+  {
+    "date": "2026-05-01 03:09",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.68,
+    "sl": 105.0244,
+    "tp": 106.9913,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.62
+  },
+  {
+    "date": "2026-05-01 03:25",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4633.7002,
+    "sl": 4641.8646,
+    "tp": 4617.3715,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.35
+  },
+  {
+    "date": "2026-05-01 03:25",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9774,
+    "sl": 0.9792,
+    "tp": 0.9738,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
+  },
+  {
+    "date": "2026-05-01 03:41",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5626,
+    "sl": 0.5612,
+    "tp": 0.5653,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
+  },
+  {
+    "date": "2026-05-01 04:14",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2195,
+    "sl": 1.2184,
+    "tp": 1.2216,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
+  },
+  {
+    "date": "2026-05-01 04:46",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3577,
+    "sl": 1.3586,
+    "tp": 1.3559,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.07
+  },
+  {
+    "date": "2026-05-01 04:46",
+    "name": "AUDUSD",
+    "direction": "LONG",
+    "entry": 0.7203,
+    "sl": 0.72,
+    "tp": 0.7209,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
+  },
+  {
+    "date": "2026-05-01 05:02",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1736,
+    "sl": 1.1733,
+    "tp": 1.1742,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.03
+  },
+  {
+    "date": "2026-05-01 05:02",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.3606,
+    "sl": 1.3602,
+    "tp": 1.3615,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.03
+  },
+  {
+    "date": "2026-05-01 05:19",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4637.2002,
+    "sl": 4628.8751,
+    "tp": 4653.8505,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
+  },
+  {
+    "date": "2026-05-01 05:19",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7813,
+    "sl": 0.7817,
+    "tp": 0.7804,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
+  },
+  {
+    "date": "2026-05-01 05:35",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 75.0,
+    "sl": 74.7058,
+    "tp": 75.5883,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.39
+  },
+  {
+    "date": "2026-05-01 05:35",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.84,
+    "sl": 105.3106,
+    "tp": 106.8987,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.5
+  },
+  {
+    "date": "2026-05-01 05:35",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9774,
+    "sl": 0.9794,
+    "tp": 0.9735,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.2
+  },
+  {
+    "date": "2026-05-01 06:07",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4628.7002,
+    "sl": 4639.4254,
+    "tp": 4607.2499,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.46
+  },
+  {
+    "date": "2026-05-01 06:07",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.219,
+    "sl": 1.22,
+    "tp": 1.2169,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-01 06:24",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2193,
+    "sl": 1.2182,
+    "tp": 1.2214,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
+  },
+  {
+    "date": "2026-05-01 06:56",
+    "name": "AUDUSD",
+    "direction": "SHORT",
+    "entry": 0.7198,
+    "sl": 0.7202,
+    "tp": 0.7189,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
+  },
+  {
+    "date": "2026-05-01 07:12",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1733,
+    "sl": 1.1738,
+    "tp": 1.1724,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
+  },
+  {
+    "date": "2026-05-01 07:12",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5621,
+    "sl": 0.5634,
+    "tp": 0.5594,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.23
+  },
+  {
+    "date": "2026-05-01 07:29",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.3598,
+    "sl": 1.3604,
+    "tp": 1.3586,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.09
+  },
+  {
+    "date": "2026-05-01 07:29",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.197,
+    "sl": 157.0084,
+    "tp": 157.5741,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.12
+  },
+  {
+    "date": "2026-05-01 07:29",
+    "name": "USDCHF",
+    "direction": "LONG",
+    "entry": 0.782,
+    "sl": 0.7816,
+    "tp": 0.7829,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
+  },
+  {
+    "date": "2026-05-01 08:33",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5628,
+    "sl": 0.5614,
+    "tp": 0.5655,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
+  },
+  {
+    "date": "2026-05-01 09:06",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9768,
+    "sl": 0.9786,
+    "tp": 0.9732,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.18
+  },
+  {
+    "date": "2026-05-01 09:22",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.56,
+    "sl": 105.1186,
+    "tp": 106.4429,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.42
+  },
+  {
+    "date": "2026-05-01 09:54",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1747,
+    "sl": 1.1742,
+    "tp": 1.1756,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
+  },
+  {
+    "date": "2026-05-01 09:54",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.3618,
+    "sl": 1.361,
+    "tp": 1.3633,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
+  },
+  {
+    "date": "2026-05-01 09:54",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7799,
+    "sl": 0.7807,
+    "tp": 0.7784,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-01 09:54",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3572,
+    "sl": 1.3584,
+    "tp": 1.3548,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
+  },
+  {
+    "date": "2026-05-01 10:11",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5624,
+    "sl": 0.5639,
+    "tp": 0.5594,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-01 10:27",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 104.55,
+    "sl": 105.2336,
+    "tp": 103.1829,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.65
+  },
+  {
+    "date": "2026-05-01 10:27",
+    "name": "AUDUSD",
+    "direction": "LONG",
+    "entry": 0.7204,
+    "sl": 0.72,
+    "tp": 0.7213,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
+  },
+  {
+    "date": "2026-05-01 10:27",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9776,
+    "sl": 0.9756,
+    "tp": 0.9815,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.2
+  },
+  {
+    "date": "2026-05-01 12:36",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.73,
+    "sl": 104.7475,
+    "tp": 107.695,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.93
+  },
+  {
+    "date": "2026-05-01 12:36",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.3598,
+    "sl": 1.361,
+    "tp": 1.3574,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.18
+  },
+  {
+    "date": "2026-05-01 12:36",
+    "name": "AUDUSD",
+    "direction": "SHORT",
+    "entry": 0.7191,
+    "sl": 0.7197,
+    "tp": 0.7179,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-01 12:36",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9758,
+    "sl": 0.9778,
+    "tp": 0.9719,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.2
+  },
+  {
+    "date": "2026-05-01 12:36",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5618,
+    "sl": 0.5634,
+    "tp": 0.5585,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-01 12:53",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 105.27,
+    "sl": 106.2729,
+    "tp": 103.2642,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.95
+  },
+  {
+    "date": "2026-05-01 12:53",
+    "name": "USDJPY",
+    "direction": "SHORT",
+    "entry": 156.566,
+    "sl": 157.1082,
+    "tp": 155.4815,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.35
+  },
+  {
+    "date": "2026-05-01 12:53",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7813,
+    "sl": 0.7826,
+    "tp": 0.7786,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.17
+  },
+  {
+    "date": "2026-05-01 12:53",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3576,
+    "sl": 1.3591,
+    "tp": 1.3546,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.11
+  },
+  {
+    "date": "2026-05-02 00:09",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.033,
+    "sl": 156.8821,
+    "tp": 157.3348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 00:09",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.067,
+    "tp": 113.3609,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
+  },
+  {
+    "date": "2026-05-02 02:18",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 02:18",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 04:18",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 04:18",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 06:19",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 06:19",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 08:19",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 08:19",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 10:20",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 10:20",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 11:05",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-02 13:11",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-02 13:11",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 13:11",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 15:13",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-02 15:13",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 15:13",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 15:58",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-02 17:14",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-02 17:14",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 17:14",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 17:59",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-02 19:15",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-02 19:15",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 19:15",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-02 20:00",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-02 22:20",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-02 22:20",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-02 22:20",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-02 22:20",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 00:21",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 00:21",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 00:21",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 00:21",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 02:21",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 02:21",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 02:21",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 02:21",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 04:22",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 04:22",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 04:22",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 04:22",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 06:23",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 06:23",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 06:23",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 06:23",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 07:08",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 08:23",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 08:23",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 08:23",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 08:23",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 09:09",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 10:24",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 10:24",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 10:24",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 10:24",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 11:09",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 12:25",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 12:25",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 12:25",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 12:25",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 13:10",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 14:25",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 14:25",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 14:25",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 14:25",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 15:11",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 16:41",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 16:41",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 16:41",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 16:41",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 17:11",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 18:42",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 18:42",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 18:42",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 18:42",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-03 19:12",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 21:12",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-03 21:12",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-03 21:12",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-03 21:12",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-03 21:12",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-04 00:12",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4644.5,
+    "sl": 4631.6,
+    "tp": 4670.3,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-04 00:12",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.431,
+    "sl": 76.0762,
+    "tp": 77.1405,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.46
+  },
+  {
+    "date": "2026-05-04 00:12",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.94,
+    "sl": 102.7254,
+    "tp": 100.3692,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.77
+  },
+  {
+    "date": "2026-05-04 00:12",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.04,
+    "sl": 156.8891,
+    "tp": 157.3418,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-04 00:12",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-04 02:13",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.033,
+    "sl": 156.8821,
+    "tp": 157.3348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-04 02:13",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-04 02:28",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.285,
+    "sl": 75.9109,
+    "tp": 77.0332,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.49
+  },
+  {
+    "date": "2026-05-04 02:59",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4625.7002,
+    "sl": 4638.3752,
+    "tp": 4600.3502,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.55
+  },
+  {
+    "date": "2026-05-04 03:29",
+    "name": "XAGUSD",
+    "direction": "SHORT",
+    "entry": 75.96,
+    "sl": 76.3479,
+    "tp": 75.1842,
+    "closed": true,
+    "result": "WIN",
+    "pct": 1.02
+  },
+  {
+    "date": "2026-05-04 03:29",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 102.07,
+    "sl": 101.4144,
+    "tp": 103.3813,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.64
+  },
+  {
+    "date": "2026-05-04 03:59",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.26,
+    "sl": 101.9779,
+    "tp": 99.8242,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.71
+  },
+  {
+    "date": "2026-05-04 04:14",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.033,
+    "sl": 156.8821,
+    "tp": 157.3348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-04 04:14",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-04 05:30",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4615.8999,
+    "sl": 4630.5891,
+    "tp": 4586.5215,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.64
+  },
+  {
+    "date": "2026-05-04 05:30",
+    "name": "XAGUSD",
+    "direction": "SHORT",
+    "entry": 76.035,
+    "sl": 76.4731,
+    "tp": 75.1587,
+    "closed": true,
+    "result": "WIN",
+    "pct": 1.15
+  },
+  {
+    "date": "2026-05-04 05:45",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 101.73,
+    "sl": 101.0925,
+    "tp": 103.005,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.63
+  },
+  {
+    "date": "2026-05-04 06:15",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.033,
+    "sl": 156.8821,
+    "tp": 157.3348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-04 06:15",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.165,
+    "sl": 113.0735,
+    "tp": 113.348,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-04 07:00",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.28,
+    "sl": 75.9011,
+    "tp": 77.0378,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.5
+  },
+  {
+    "date": "2026-05-04 07:15",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.42,
+    "sl": 102.1121,
+    "tp": 100.0358,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.68
+  },
+  {
+    "date": "2026-05-04 07:46",
+    "name": "XAGUSD",
+    "direction": "SHORT",
+    "entry": 76.115,
+    "sl": 76.4542,
+    "tp": 75.4367,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.89
+  },
+  {
+    "date": "2026-05-04 07:46",
+    "name": "AUDUSD",
+    "direction": "LONG",
+    "entry": 0.7211,
+    "sl": 0.7208,
+    "tp": 0.7217,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
+  },
+  {
+    "date": "2026-05-04 07:46",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9795,
+    "sl": 0.978,
+    "tp": 0.9825,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.15
+  },
+  {
+    "date": "2026-05-04 08:16",
+    "name": "USDCAD",
+    "direction": "LONG",
+    "entry": 1.359,
+    "sl": 1.3578,
+    "tp": 1.3614,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.18
+  },
+  {
+    "date": "2026-05-04 08:31",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 156.779,
+    "sl": 156.6266,
+    "tp": 157.0838,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-04 08:31",
+    "name": "AUDUSD",
+    "direction": "SHORT",
+    "entry": 0.7207,
+    "sl": 0.721,
+    "tp": 0.7201,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
+  },
+  {
+    "date": "2026-05-04 09:16",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4602.2998,
+    "sl": 4615.2643,
+    "tp": 4576.3708,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.28
+  },
+  {
+    "date": "2026-05-04 09:16",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5627,
+    "sl": 0.5616,
+    "tp": 0.5648,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.2
+  },
+  {
+    "date": "2026-05-04 09:31",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 113.017,
+    "sl": 113.1517,
+    "tp": 112.7476,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.24
+  },
+  {
+    "date": "2026-05-04 09:46",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 101.76,
+    "sl": 101.069,
+    "tp": 103.1421,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.68
+  },
+  {
+    "date": "2026-05-04 09:46",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.358,
+    "sl": 1.3586,
+    "tp": 1.3568,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.04
+  },
+  {
+    "date": "2026-05-04 09:46",
+    "name": "USDCHF",
+    "direction": "LONG",
+    "entry": 0.7815,
+    "sl": 0.7809,
+    "tp": 0.7827,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.08
+  },
+  {
+    "date": "2026-05-04 09:46",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9783,
+    "sl": 0.98,
+    "tp": 0.975,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.34
+  },
+  {
+    "date": "2026-05-04 10:32",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1726,
+    "sl": 1.1732,
+    "tp": 1.1714,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.05
+  },
+  {
+    "date": "2026-05-04 11:17",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5629,
+    "sl": 0.5616,
+    "tp": 0.5656,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.23
+  },
+  {
+    "date": "2026-05-04 12:02",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9786,
+    "sl": 0.9806,
+    "tp": 0.9747,
+    "closed": true,
+    "result": "WIN",
+    "pct": 0.4
+  },
+  {
+    "date": "2026-05-04 12:02",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 112.926,
+    "sl": 113.0511,
+    "tp": 112.6758,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.11
+  },
+  {
+    "date": "2026-05-04 12:17",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2193,
+    "sl": 1.2205,
+    "tp": 1.2169,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-04 12:32",
+    "name": "AUDUSD",
+    "direction": "SHORT",
+    "entry": 0.72,
+    "sl": 0.7204,
+    "tp": 0.7191,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.06
+  },
+  {
+    "date": "2026-05-04 13:18",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5624,
+    "sl": 0.5641,
+    "tp": 0.5591,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-04 13:48",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.563,
+    "sl": 0.5613,
+    "tp": 0.5663,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.3
+  },
+  {
+    "date": "2026-05-04 14:03",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9771,
+    "sl": 0.9795,
+    "tp": 0.9723,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.25
+  },
+  {
+    "date": "2026-05-04 14:18",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.65,
+    "sl": 103.9946,
+    "tp": 108.9608,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -1.57
+  },
+  {
+    "date": "2026-05-04 14:18",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1704,
+    "sl": 1.1715,
+    "tp": 1.1683,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.09
+  },
+  {
+    "date": "2026-05-04 14:18",
+    "name": "USDCAD",
+    "direction": "LONG",
+    "entry": 1.3608,
+    "sl": 1.3593,
+    "tp": 1.3638,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.11
+  },
+  {
+    "date": "2026-05-04 14:18",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 112.825,
+    "sl": 112.9746,
+    "tp": 112.5259,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
+  },
+  {
+    "date": "2026-05-04 14:34",
+    "name": "AUDUSD",
+    "direction": "SHORT",
+    "entry": 0.7181,
+    "sl": 0.719,
+    "tp": 0.7163,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.13
+  },
+  {
+    "date": "2026-05-04 14:49",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4567.7002,
+    "sl": 4585.5181,
+    "tp": 4532.0644,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.39
+  },
+  {
+    "date": "2026-05-04 14:49",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2199,
+    "sl": 1.2187,
+    "tp": 1.2223,
+    "closed": true,
+    "result": "LOSS",
+    "pct": -0.1
+  },
+  {
+    "date": "2026-05-05 00:04",
+    "name": "XAGUSD",
+    "direction": "SHORT",
+    "entry": 73.185,
+    "sl": 73.4636,
+    "tp": 72.6279,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:04",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.3531,
+    "sl": 1.3537,
+    "tp": 1.3519,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:04",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7829,
+    "sl": 0.7837,
+    "tp": 0.7814,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:04",
+    "name": "USDCAD",
+    "direction": "LONG",
+    "entry": 1.362,
+    "sl": 1.3605,
+    "tp": 1.365,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:04",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.22,
+    "sl": 1.221,
+    "tp": 1.2179,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:04",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5614,
+    "sl": 0.5628,
+    "tp": 0.5587,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:19",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9756,
+    "sl": 0.9776,
+    "tp": 0.9717,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:19",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 112.617,
+    "sl": 112.7836,
+    "tp": 112.2837,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 00:34",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1695,
+    "sl": 1.1701,
+    "tp": 1.1683,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 01:04",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.2,
+    "sl": 156.9598,
+    "tp": 157.6803,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 01:04",
+    "name": "USDCHF",
+    "direction": "LONG",
+    "entry": 0.7839,
+    "sl": 0.7829,
+    "tp": 0.786,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 01:04",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2206,
+    "sl": 1.2188,
+    "tp": 1.2242,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 01:20",
+    "name": "AUDUSD",
+    "direction": "SHORT",
+    "entry": 0.7169,
+    "sl": 0.7172,
+    "tp": 0.7163,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 02:05",
+    "name": "XAUUSD",
+    "direction": "SHORT",
+    "entry": 4525.6001,
+    "sl": 4534.6966,
+    "tp": 4507.4072,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 02:05",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.353,
+    "sl": 1.3536,
+    "tp": 1.3518,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 02:20",
+    "name": "XAGUSD",
+    "direction": "SHORT",
+    "entry": 73.03,
+    "sl": 73.2614,
+    "tp": 72.5671,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 02:20",
+    "name": "USDCAD",
+    "direction": "LONG",
+    "entry": 1.3622,
+    "sl": 1.3609,
+    "tp": 1.3649,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 03:05",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2208,
+    "sl": 1.2198,
+    "tp": 1.2229,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 03:20",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1695,
+    "sl": 1.17,
+    "tp": 1.1686,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 03:20",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 112.637,
+    "sl": 112.7336,
+    "tp": 112.4438,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 03:35",
+    "name": "USOIL",
+    "direction": "LONG",
+    "entry": 105.14,
+    "sl": 104.6364,
+    "tp": 106.1471,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 03:35",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9754,
+    "sl": 0.9772,
+    "tp": 0.9718,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 03:35",
+    "name": "AUDCHF",
+    "direction": "SHORT",
+    "entry": 0.5615,
+    "sl": 0.5628,
+    "tp": 0.5588,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 04:21",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4543.8999,
+    "sl": 4534.1286,
+    "tp": 4563.4425,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 05:06",
+    "name": "USDCHF",
+    "direction": "LONG",
+    "entry": 0.7841,
+    "sl": 0.7837,
+    "tp": 0.785,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 05:21",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 104.56,
+    "sl": 104.9918,
+    "tp": 103.6963,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 05:21",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2208,
+    "sl": 1.2198,
+    "tp": 1.2229,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 08:37",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4548.5,
+    "sl": 4536.5964,
+    "tp": 4572.3071,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 08:37",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 73.44,
+    "sl": 73.1014,
+    "tp": 74.1171,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 08:52",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1686,
+    "sl": 1.1691,
+    "tp": 1.1677,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 08:52",
+    "name": "GBPUSD",
+    "direction": "SHORT",
+    "entry": 1.3521,
+    "sl": 1.3527,
+    "tp": 1.3509,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 09:07",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.259,
+    "sl": 157.1879,
+    "tp": 157.4012,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 12:20",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4570.0,
+    "sl": 4557.5929,
+    "tp": 4594.8142,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 12:20",
+    "name": "EURUSD",
+    "direction": "SHORT",
+    "entry": 1.1686,
+    "sl": 1.1692,
+    "tp": 1.1674,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 12:35",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1692,
+    "sl": 1.1686,
+    "tp": 1.1704,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 12:35",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7835,
+    "sl": 0.7842,
+    "tp": 0.782,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 12:35",
+    "name": "AUDCAD",
+    "direction": "SHORT",
+    "entry": 0.9747,
+    "sl": 0.9768,
+    "tp": 0.9705,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 12:50",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 103.75,
+    "sl": 104.8546,
+    "tp": 101.5408,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 13:05",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3612,
+    "sl": 1.3626,
+    "tp": 1.3585,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 13:36",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.3549,
+    "sl": 1.354,
+    "tp": 1.3567,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 17:08",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 74.12,
+    "sl": 73.5956,
+    "tp": 75.1688,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 17:08",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1703,
+    "sl": 1.1695,
+    "tp": 1.1718,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 17:08",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.3557,
+    "sl": 1.3546,
+    "tp": 1.3578,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 17:08",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.741,
+    "sl": 157.5796,
+    "tp": 158.0638,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 17:08",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7829,
+    "sl": 0.7838,
+    "tp": 0.7811,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 17:08",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3609,
+    "sl": 1.3626,
+    "tp": 1.3576,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 18:23",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5623,
+    "sl": 0.5608,
+    "tp": 0.5653,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 18:39",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2184,
+    "sl": 1.2199,
+    "tp": 1.2154,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 19:24",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.753,
+    "sl": 157.6255,
+    "tp": 158.008,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 19:24",
+    "name": "USDCAD",
+    "direction": "LONG",
+    "entry": 1.3619,
+    "sl": 1.3601,
+    "tp": 1.3655,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-05 19:24",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2196,
+    "sl": 1.2181,
+    "tp": 1.2226,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 01:55",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7821,
+    "sl": 0.7832,
+    "tp": 0.78,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 01:55",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3611,
+    "sl": 1.3623,
+    "tp": 1.3587,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 01:55",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2208,
+    "sl": 1.2182,
+    "tp": 1.2259,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 01:55",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9795,
+    "sl": 0.9777,
+    "tp": 0.9831,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 01:55",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5628,
+    "sl": 0.5613,
+    "tp": 0.5658,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 01:55",
+    "name": "AUDJPY",
+    "direction": "LONG",
+    "entry": 113.451,
+    "sl": 113.3266,
+    "tp": 113.6997,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 02:10",
+    "name": "XAUUSD",
+    "direction": "LONG",
+    "entry": 4583.0,
+    "sl": 4572.575,
+    "tp": 4603.85,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 02:25",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2192,
+    "sl": 1.2216,
+    "tp": 1.2144,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 03:10",
+    "name": "USDJPY",
+    "direction": "SHORT",
+    "entry": 157.644,
+    "sl": 157.7664,
+    "tp": 157.3992,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 03:56",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 101.03,
+    "sl": 102.2268,
+    "tp": 98.6363,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 03:56",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7811,
+    "sl": 0.7823,
+    "tp": 0.7787,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 03:56",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.2202,
+    "sl": 1.2176,
+    "tp": 1.2253,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 05:56",
+    "name": "USDJPY",
+    "direction": "LONG",
+    "entry": 157.769,
+    "sl": 157.6456,
+    "tp": 158.0159,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 05:56",
+    "name": "AUDNZD",
+    "direction": "LONG",
+    "entry": 1.22,
+    "sl": 1.2188,
+    "tp": 1.2224,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 06:12",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 100.62,
+    "sl": 101.3506,
+    "tp": 99.1587,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 06:12",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1725,
+    "sl": 1.1719,
+    "tp": 1.1737,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 06:12",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.3571,
+    "sl": 1.3565,
+    "tp": 1.3583,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 06:12",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7814,
+    "sl": 0.782,
+    "tp": 0.7802,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 06:12",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3598,
+    "sl": 1.3611,
+    "tp": 1.3571,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 06:27",
+    "name": "AUDNZD",
+    "direction": "SHORT",
+    "entry": 1.2197,
+    "sl": 1.221,
+    "tp": 1.217,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 07:27",
+    "name": "USDJPY",
+    "direction": "SHORT",
+    "entry": 157.468,
+    "sl": 157.6181,
+    "tp": 157.1677,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 08:12",
+    "name": "GBPUSD",
+    "direction": "LONG",
+    "entry": 1.359,
+    "sl": 1.3581,
+    "tp": 1.3608,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 08:27",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5652,
+    "sl": 0.5637,
+    "tp": 0.5682,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 08:58",
+    "name": "EURUSD",
+    "direction": "LONG",
+    "entry": 1.1734,
+    "sl": 1.1726,
+    "tp": 1.1749,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 08:58",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.359,
+    "sl": 1.3604,
+    "tp": 1.3563,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 09:13",
+    "name": "USOIL",
+    "direction": "SHORT",
+    "entry": 99.84,
+    "sl": 100.3425,
+    "tp": 98.835,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 10:28",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5656,
+    "sl": 0.5639,
+    "tp": 0.5689,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 11:44",
+    "name": "USDJPY",
+    "direction": "SHORT",
+    "entry": 156.145,
+    "sl": 156.4617,
+    "tp": 155.5117,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 11:44",
+    "name": "USDCHF",
+    "direction": "SHORT",
+    "entry": 0.7798,
+    "sl": 0.7808,
+    "tp": 0.7777,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 11:44",
+    "name": "USDCAD",
+    "direction": "SHORT",
+    "entry": 1.3586,
+    "sl": 1.3601,
+    "tp": 1.3556,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 11:44",
+    "name": "AUDUSD",
+    "direction": "LONG",
+    "entry": 0.7253,
+    "sl": 0.7245,
+    "tp": 0.7268,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 11:44",
+    "name": "AUDCAD",
+    "direction": "LONG",
+    "entry": 0.9848,
+    "sl": 0.9826,
+    "tp": 0.9893,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 11:59",
+    "name": "XAGUSD",
+    "direction": "LONG",
+    "entry": 76.665,
+    "sl": 76.3232,
+    "tp": 77.3487,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 12:14",
+    "name": "AUDJPY",
+    "direction": "SHORT",
+    "entry": 113.165,
+    "sl": 113.4131,
+    "tp": 112.6688,
+    "closed": false,
+    "result": null,
+    "pct": null
+  },
+  {
+    "date": "2026-05-06 12:30",
+    "name": "AUDCHF",
+    "direction": "LONG",
+    "entry": 0.5658,
+    "sl": 0.5643,
+    "tp": 0.5688,
     "closed": false,
     "result": null,
     "pct": null

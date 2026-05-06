@@ -1,0 +1,156 @@
+<!-- ============================================
+     COMMOTI AI — 25X Productivity Dashboard
+     Post #16: Before AI vs After AI tracking
+     Host on: commotiai.online
+     ============================================ -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commoti AI | 25X Productivity Dashboard</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0f172a; color:#e2e8f0; font-family:'Segoe UI', sans-serif; }
+  .header { background:linear-gradient(135deg,#1e3a5f,#0f172a); padding:32px 24px; text-align:center; border-bottom:1px solid #1e3a5f; }
+  .header h1 { color:#60a5fa; font-size:2.2em; }
+  .header p { color:#94a3b8; margin-top:8px; }
+
+  .container { max-width:1100px; margin:0 auto; padding:24px; }
+
+  .multiplier-card { text-align:center; padding:40px 20px; background:linear-gradient(135deg,#064e3b,#0f172a); border-radius:16px; margin-bottom:24px; border:2px solid #065f46; }
+  .multiplier-card .number { font-size:5em; font-weight:900; color:#4ade80; line-height:1; }
+  .multiplier-card .label { color:#94a3b8; font-size:1.3em; margin-top:8px; }
+
+  .comparison { display:grid; grid-template-columns:1fr auto 1fr; gap:20px; margin-bottom:24px; align-items:center; }
+  .comparison .col { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:24px; }
+  .comparison .col h3 { text-align:center; margin-bottom:16px; }
+  .comparison .col h3.before { color:#f87171; }
+  .comparison .col h3.after { color:#4ade80; }
+  .comparison .arrow { font-size:3em; color:#60a5fa; }
+
+  table { width:100%; border-collapse:collapse; margin:12px 0; }
+  th { text-align:right; padding:10px 14px; background:#0f172a; color:#94a3b8; font-size:0.85em; border-bottom:2px solid #334155; }
+  td { padding:10px 14px; border-bottom:1px solid #1e293b; font-size:0.9em; }
+  tr:hover td { background:#1e3a5f; }
+
+  .gain { color:#4ade80; font-weight:700; }
+  .loss { color:#f87171; }
+
+  .cmd-box { background:#0f172a; border:1px solid #334155; border-radius:8px; padding:20px; margin-top:24px; }
+  .cmd-box code { color:#4ade80; font-size:1em; }
+
+  .footer { text-align:center; padding:24px; color:#64748b; font-size:0.8em; }
+  .footer a { color:#60a5fa; }
+
+  @media (max-width:768px) {
+    .comparison { grid-template-columns:1fr; }
+    .arrow { display:none; }
+    .multiplier-card .number { font-size:3em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 Commoti AI — 25X Productivity Dashboard</h1>
+  <p>Before AI vs After AI | Post #16 | 5X → 25X Multiplier</p>
+</div>
+
+<div class="container">
+
+  <!-- Multiplier Display -->
+  <div class="multiplier-card">
+    <div class="number">25×</div>
+    <div class="label">תפוקה עם AI</div>
+    <p style="color:#6ee7b7;margin-top:8px;">5× לעובד טוב | 25× לעובד AI-first</p>
+  </div>
+
+  <!-- Before vs After Comparison -->
+  <div class="comparison">
+    <div class="col">
+      <h3 class="before">🔴 Before AI</h3>
+      <table>
+        <tr><th>משימה</th><th>זמן</th></tr>
+        <tr><td>כתיבת פוסט בלוג</td><td>3-4 שעות</td></tr>
+        <tr><td>מחקר מילות מפתח</td><td>1-2 שעות</td></tr>
+        <tr><td>ניתוח חוזה</td><td>שליחה לעו"ד, 2-3 ימים</td></tr>
+        <tr><td>סריקת 50 גרפים</td><td>1.5 שעות</td></tr>
+        <tr><td>כתיבת Newsletter</td><td>1 שעה</td></tr>
+        <tr><td>Upload WordPress</td><td>10 דקות/פוסט</td></tr>
+        <tr style="background:#1e3a5f;"><td><strong>סה"כ</strong></td><td><strong>8+ שעות/יום</strong></td></tr>
+      </table>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <h3 class="after">🟢 After AI</h3>
+      <table>
+        <tr><th>משימה</th><th>זמן</th></tr>
+        <tr><td>כתיבת פוסט בלוג</td><td class="gain">15-30 דקות</td></tr>
+        <tr><td>מחקר מילות מפתח</td><td class="gain">5-10 דקות</td></tr>
+        <tr><td>ניתוח חוזה</td><td class="gain">30 שניות</td></tr>
+        <tr><td>סריקת 50 גרפים</td><td class="gain">2 דקות</td></tr>
+        <tr><td>כתיבת Newsletter</td><td class="gain">5-10 דקות</td></tr>
+        <tr><td>Upload WordPress</td><td class="gain">אוטומטי</td></tr>
+        <tr style="background:#1e3a5f;"><td><strong>סה"כ</strong></td><td><strong class="gain">30-60 דקות</strong></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Active Tools -->
+  <h2 style="color:#60a5fa;margin:32px 0 16px;">🛠️ Active AI Tools (Commodi AI)</h2>
+  <table>
+    <thead>
+      <tr><th>כלי</th><th>סוג</th><th>קובץ</th><th>זמן חסכון</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>4 AI Agents Pipeline</strong></td>
+        <td>Research→Draft→FC→Edit</td>
+        <td><code>ai_agents_pipeline.py</code></td>
+        <td class="gain">85%</td>
+      </tr>
+      <tr>
+        <td><strong>AI Contract Reader</strong></td>
+        <td>חוזים</td>
+        <td><code>contract_reader.py</code></td>
+        <td class="gain">99%</td>
+      </tr>
+      <tr>
+        <td><strong>wp_auto_poster</strong></td>
+        <td>WordPress Upload</td>
+        <td><code>wp_auto_poster.py</code></td>
+        <td class="gain">100%</td>
+      </tr>
+      <tr>
+        <td><strong>Entry Monitor</strong></td>
+        <td>15 Assets Scanner</td>
+        <td><code>entry_monitor.py</code></td>
+        <td class="gain">95%</td>
+      </tr>
+      <tr>
+        <td><strong>Diamond Scanner</strong></td>
+        <td>50+ Assets</td>
+        <td><code>diamond_scanner.py</code></td>
+        <td class="gain">90%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Command to run -->
+  <div class="cmd-box">
+    <h3 style="color:#60a5fa;">▶️ Commands</h3>
+    <code>python ai_agents_pipeline.py "נושא הפוסט"</code>
+    <br>
+    <code>python contract_reader.py "path/to/contract.txt"</code>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Commoti AI — 25X Productivity Dashboard | <a href="https://commotiai.com">Blog</a> | Post #16: "Small Team, Army Output"</p>
+  <p>Data: Actual measurements from Moti's workflow (30/04-01/05/2026)</p>
+</div>
+
+</body>
+</html>

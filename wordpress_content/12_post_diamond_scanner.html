@@ -1,0 +1,62 @@
+<!-- POST: Diamond Scanner Explained -->
+<!-- Title: "Diamond Scanner: How We Rank 50+ Assets Every Morning" -->
+<!-- Category: Scanner | Tags: market scanner, confluence, signals, automation -->
+
+<div style="max-width:800px;margin:0 auto;font-family:sans-serif;color:#e2e8f0;line-height:1.7;">
+
+<p style="color:#94a3b8;font-size:0.9em;">📅 May 2026 | ⏱️ 4 min read | 🏷️ Scanner, Automation</p>
+
+<h2 style="color:#a78bfa;">The Problem: Too Many Markets, Too Little Time</h2>
+<p>Every morning, a trader faces the same problem: Gold? Euro? Nasdaq? Oil? There are 50+ tradeable instruments across Forex, commodities, and indices — and checking each one manually takes hours.</p>
+<p>The Diamond Scanner solves this by running automated analysis across all assets at 08:30 every morning and ranking them by a single score: the <strong>Diamond Score</strong>.</p>
+
+<h2 style="color:#a78bfa;">How the Diamond Score Works</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0;">
+  <div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:14px;">
+    <div style="color:#a78bfa;font-size:1.3em;">📊</div>
+    <strong style="color:#c4b5fd;">RSI Position</strong>
+    <p style="color:#94a3b8;font-size:0.85em;margin:4px 0 0;">Oversold/Overbought score. Extreme readings = higher potential.</p>
+  </div>
+  <div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:14px;">
+    <div style="color:#a78bfa;font-size:1.3em;">📈</div>
+    <strong style="color:#c4b5fd;">MA Alignment</strong>
+    <p style="color:#94a3b8;font-size:0.85em;margin:4px 0 0;">MA20 vs MA50 vs MA200. All aligned = strong trend signal.</p>
+  </div>
+  <div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:14px;">
+    <div style="color:#a78bfa;font-size:1.3em;">⚡</div>
+    <strong style="color:#c4b5fd;">ATR Volatility</strong>
+    <p style="color:#94a3b8;font-size:0.85em;margin:4px 0 0;">High ATR = room to move. Low ATR = avoid (chop).</p>
+  </div>
+  <div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:14px;">
+    <div style="color:#a78bfa;font-size:1.3em;">📰</div>
+    <strong style="color:#c4b5fd;">News Sentiment</strong>
+    <p style="color:#94a3b8;font-size:0.85em;margin:4px 0 0;">RSS scan of ForexLive, ZeroHedge, MarketWatch. BULLISH/BEARISH/NEUTRAL.</p>
+  </div>
+</div>
+
+<div style="background:#1e293b;border-left:4px solid #a78bfa;padding:16px;border-radius:0 8px 8px 0;margin:20px 0;">
+  <p style="margin:0;color:#94a3b8;"><strong style="color:#c4b5fd;">Formula:</strong><br>
+  Diamond Score = (RSI_score × 0.3) + (MA_score × 0.3) + (ATR_score × 0.2) + (Sentiment_score × 0.2)<br>
+  <span style="font-size:0.85em;">Range: 0–100. Score &gt; 70 = Diamond opportunity.</span></p>
+</div>
+
+<h2 style="color:#a78bfa;">Sample Morning Report</h2>
+<div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:16px;font-family:monospace;font-size:0.85em;margin:20px 0;">
+  <div style="color:#a78bfa;">💎 DIAMOND REPORT — 01/05/2026 08:30</div>
+  <div style="color:#34d399;margin-top:8px;">1. XAUUSD  — Score: 84 ⭐⭐⭐  BULLISH  RSI:28 ATR:HIGH</div>
+  <div style="color:#34d399;">2. GBPUSD  — Score: 76 ⭐⭐⭐  BEARISH  RSI:72 ATR:MED</div>
+  <div style="color:#fbbf24;">3. US100   — Score: 68 ⭐⭐     NEUTRAL  RSI:51 ATR:HIGH</div>
+  <div style="color:#94a3b8;">4. EURUSD  — Score: 45        NEUTRAL  RSI:48 ATR:LOW</div>
+  <div style="color:#94a3b8;">5. USOIL   — Score: 38        BEARISH  RSI:61 ATR:LOW</div>
+</div>
+
+<h2 style="color:#a78bfa;">Technical Setup</h2>
+<p>The scanner runs as a Python script via Windows Task Scheduler at 08:30 daily. It pulls data from <code style="background:#1e293b;padding:2px 6px;border-radius:4px;">yfinance</code>, processes signals, and sends the top 5 to Telegram automatically. Zero manual intervention.</p>
+
+<div style="background:#1e3a5f;border:1px solid #5b21b6;border-radius:8px;padding:20px;margin-top:32px;text-align:center;">
+  <p style="color:#c4b5fd;margin:0 0 12px;"><strong>Get the Diamond Report free every morning</strong></p>
+  <a href="https://t.me/YOUR_CHANNEL" style="background:#5b21b6;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none;">Join Telegram →</a>
+</div>
+
+</div>

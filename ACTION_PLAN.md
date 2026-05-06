@@ -34,8 +34,9 @@ cd "C:\Users\gfdh5555\Desktop\projects\dropship-machine"
 git checkout --orphan clean
 git add -A
 git commit -m "fresh start — no credentials in history"
+git branch -M master
 git remote add origin https://github.com/botbikamordehai2-sketch/dropship-machine.git
-git push -u origin clean
+git push -u origin master
 ```
 
 ### 4. Etsy — Upload canva-assets

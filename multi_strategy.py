@@ -166,11 +166,9 @@ def run_all_strategies():
             continue
 
         for sid, strat in STRATEGIES.items():
-            # בדיקת חדשות
+            # בדיקת חדשות — news_events הוא string או None
             if strat.get("news_block") and news_events:
-                for ev in news_events:
-                    if ev.get("currency", "") in name:
-                        continue  # skip this asset
+                continue  # חוסם את הנכס כשיש HIGH impact news פעיל
 
             # בדיקת duplicate
             dup_key = f"{sid}_{name}"

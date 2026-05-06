@@ -1,0 +1,63 @@
+<!-- ============================================
+     POST 1: ICT Silver Bullet Setup
+     WordPress → Posts → Add New → Paste in "Text" tab
+     Category: ICT Trading | Tags: SMC, Silver Bullet, Killzone
+     ============================================ -->
+
+<h1 style="color:#e2e8f0;">Understanding the ICT Silver Bullet Setup</h1>
+<p style="color:#94a3b8;">Published: May 2026 | Category: ICT Trading</p>
+
+<hr style="border-color:#334155;">
+
+<p style="color:#cbd5e1;font-size:1.1em;">
+The ICT Silver Bullet is one of the most reliable setups in the Smart Money Concepts framework. 
+It focuses on a specific 1-hour window — <strong style="color:#60a5fa;">10:00 AM to 11:00 AM NY time</strong> — where institutional order flow creates predictable, high-probability moves.
+</p>
+
+<h2 style="color:#60a5fa;">Why the Silver Bullet Works</h2>
+<p style="color:#cbd5e1;">
+The 10-11 AM window is a <strong>killzone</strong> — a period where the interbank price delivery algorithm executes large pending orders. 
+During this window, price tends to displace from the 10:00 AM opening price toward a liquidity pool.
+</p>
+
+<h2 style="color:#60a5fa;">Entry Rules (Step by Step)</h2>
+
+<ol style="color:#cbd5e1;">
+  <li><strong>Wait for 10:00 AM NY time.</strong> Mark the opening price on EURUSD or NASDAQ.</li>
+  <li><strong>Identify the Judas Swing:</strong> Price will often push in one direction first, then reverse.</li>
+  <li><strong>Look for a Fair Value Gap (FVG):</strong> A 3-candle pattern with a gap between candle 1 low and candle 3 high (or vice versa).</li>
+  <li><strong>Enter on the retrace into FVG:</strong> Place a limit order at the 50% level of the FVG.</li>
+  <li><strong>Stop loss:</strong> Below the recent swing low (or above swing high for shorts).</li>
+  <li><strong>Target:</strong> The opposing liquidity pool — previous day high/low or an imbalance.</li>
+</ol>
+
+<h2 style="color:#60a5fa;">Real Example: EURUSD — April 29, 2026</h2>
+<div style="background:#0f172a;padding:16px;border-radius:8px;border:1px solid #334155;">
+  <table style="width:100%;color:#cbd5e1;">
+    <tr><td style="color:#94a3b8;">Entry:</td><td>1.0720 (FVG 50% fill)</td></tr>
+    <tr><td style="color:#94a3b8;">Stop:</td><td>1.0695 (25 pips)</td></tr>
+    <tr><td style="color:#94a3b8;">Target:</td><td>1.0770 (50 pips)</td></tr>
+    <tr><td style="color:#94a3b8;">R:R:</td><td>1:2</td></tr>
+    <tr><td style="color:#4ade80;">Result:</td><td style="color:#4ade80;">+50 pips ✅ Target hit</td></tr>
+  </table>
+</div>
+
+<h2 style="color:#60a5fa;">Risk Management</h2>
+<ul style="color:#cbd5e1;">
+  <li>Max 1% risk per trade (FTMO/Blueberry rule)</li>
+  <li>Max 2 trades per day (Circuit Breaker)</li>
+  <li>No Silver Bullet on NFP/FOMC days</li>
+  <li>Always confirm with RSI divergence before entry</li>
+</ul>
+
+<h2 style="color:#60a5fa;">Automating the Setup</h2>
+<p style="color:#cbd5e1;">
+Our <strong>RSI_MA20_Bot (MQL5)</strong> scans for Silver Bullet conditions on EURUSD H1 — it checks RSI+MA20 confluence, 
+marks the FVG automatically, and sends signals to Telegram via <code>entry_monitor.py</code>.
+</p>
+<p style="color:#cbd5e1;">
+Want to run this automatically on FTMO? <a href="/tools" style="color:#60a5fa;">Check our recommended tools →</a>
+</p>
+
+<hr style="border-color:#334155;">
+<p style="color:#64748b;font-size:0.9em;">Disclaimer: Trading involves risk. Past performance does not guarantee future results. This is educational content, not financial advice.</p>

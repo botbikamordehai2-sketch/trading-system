@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-05-01 21:48:03",
+  "generated_at": "2026-05-04 08:00:35",
   "generated_by": "Claude API (daily_bias_ai.py — Path 1 Macro Sync)",
-  "bias": "BEARISH",
+  "bias": "BULLISH",
   "confidence": 0.72,
-  "reasoning": "כל האינדיקטורים המרכזיים — DXY, VIX, NDX — מציגים ציון חלש של 1/3 עם הטיה דובית, ותשואת האג\"ח ל-10 שנים עולה, מה שמגביר לחץ על מניות הטכנולוגיה ומחזק את הסנטימנט השלילי בשוק.",
-  "risk_level": "MEDIUM",
-  "killzone_advice": "CAUTION",
+  "reasoning": "הסקאנר המכני מראה הטיה שורית עם ציונים של 2/3 ב-DXY, VIX ו-NDX, בעוד SPX עולה ב-0.29% ותשואת ה-10Y יורדת — סביבה תומכת בעליות עם לחץ קל על הדולר.",
+  "risk_level": "LOW",
+  "killzone_advice": "TRADE",
   "pairs_to_focus": [
     "XAUUSD",
-    "EURUSD"
+    "EURUSD",
+    "GBPUSD"
   ]
 }

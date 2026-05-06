@@ -1,7 +1,7 @@
-# NASDAQ (NQ) -- BIAS Daily | Week 27/04/2026
+# NASDAQ (NQ) -- BIAS Daily | Week 06/05/2026
 
-> **Updated:** 2026-04-27 16:34 IST
-> **BIAS:** BEARISH
+> **Updated:** 2026-05-06 07:55 IST
+> **BIAS:** BULLISH
 > **Timeframe:** Daily / 4H
 
 ---
@@ -13,34 +13,34 @@
 
 | # | Source | BIAS | Summary |
 |---|------|------|-------|
-| ZeroHedge | {'bias': 'BULLISH', 'headlines': [{'title': 'Futures Flat At All Time Highs Ahead Of Huge Week, Semis Set For 19th Day Of Gai', 'bias': 'BULLISH'}, {'title': 'Israel Bombs Deep Into Lebanon For First Time Of 3-Week Ceasefire', 'bias': 'BULLISH'}, {'title': "China Abruptly Blocks Meta's $2 Billion Takeover Deal Of Manus AI", 'bias': 'BULLISH'}], 'bull': 38, 'bear': 25} | ____ |
+| ZeroHedge | {'bias': 'BULLISH', 'headlines': [{'title': 'The Petrogas-Dollar: Symptom Or Strategy?', 'bias': 'BULLISH'}, {'title': 'Meteorologists Sound Alarm Over El Nino Plume Racing Across Pacific Like "Freigh', 'bias': 'NEUTRAL'}, {'title': "Industry Leaders Warn Chinese EV Imports Will Undercut Canada's Auto Sector, Bri", 'bias': 'BEARISH'}], 'bull': 21, 'bear': 16} | ____ |
 | MarketWatch | {'bias': 'NEUTRAL', 'headlines': [], 'bull': 0, 'bear': 0} | ____ |
-| ForexLive | {'bias': 'BEARISH', 'headlines': [{'title': 'Canada to set up $25 bilion sovereign wealth fund', 'bias': 'BULLISH'}, {'title': 'investingLive European markets wrap: Oil holds firmer, stocks steady on cautious', 'bias': 'BULLISH'}, {'title': 'Major central banks are up against a very tough task in navigating monetary poli', 'bias': 'BEARISH'}], 'bull': 20, 'bear': 22} | ____ |
+| ForexLive | {'bias': 'BULLISH', 'headlines': [{'title': 'investingLive Asia-Pacific news wrap: Trump pauses Project Freedom. Oil drops, g', 'bias': 'BULLISH'}, {'title': 'China private survey Rating Dog Services PMI 52.6 in April (up from 52.1 in Marc', 'bias': 'BULLISH'}, {'title': 'Australia to build A$10bn fuel reserve as Middle East crisis drives stockpile pu', 'bias': 'NEUTRAL'}], 'bull': 48, 'bear': 39} | ____ |
 | FXEmpire | {'bias': 'NEUTRAL', 'headlines': [], 'bull': 0, 'bear': 0} | ____ |
-| Investing.com | {'bias': 'BULLISH', 'headlines': [{'title': 'Germany’s Finance Ministry open to suspending debt brake amid Iran war', 'bias': 'NEUTRAL'}, {'title': 'Microsoft will no longer have exclusive access to OpenAI’s technology', 'bias': 'NEUTRAL'}, {'title': 'Earnings call transcript: Nordex Q1 2026 sees strong growth, stock rises 4.28%', 'bias': 'BULLISH'}], 'bull': 4, 'bear': 1} | ____ |
+| Investing.com | {'bias': 'BULLISH', 'headlines': [{'title': 'Blue Owl’s Stack to consider $30 billion sale of Asia operations, Bloomberg News', 'bias': 'NEUTRAL'}, {'title': 'Blue Origin revamps employee stock plan amid SpaceX IPO preparations- FT', 'bias': 'NEUTRAL'}, {'title': 'Morning Bid: Stocks surge in Seoul as Samsung surpasses Berkshire', 'bias': 'BULLISH'}], 'bull': 3, 'bear': 2} | ____ |
 | Reuters Markets | {'bias': 'NEUTRAL', 'headlines': [], 'bull': 0, 'bear': 0} | ____ |
 
 ### X (Twitter) Heads-Up
 | # | Account | BIAS | Summary |
 |---|-------|------|-------|
-| @LizAnnSonders | {'bias': 'NEUTRAL', 'bull': 0, 'bear': 0} | ____ |
+| @LizAnnSonders | {'bias': 'BEARISH', 'bull': 0, 'bear': 1} | ____ |
 | @alphatrends | {'bias': 'NEUTRAL', 'bull': 0, 'bear': 0} | ____ |
-| @ZeroHedge | {'bias': 'BULLISH', 'bull': 1, 'bear': 0} | ____ |
-| @ripster47 | {'bias': 'NEUTRAL', 'bull': 2, 'bear': 2} | ____ |
+| @ZeroHedge | {'bias': 'NEUTRAL', 'bull': 0, 'bear': 0} | ____ |
+| @ripster47 | {'bias': 'NEUTRAL', 'bull': 1, 'bear': 1} | ____ |
 
 ---
 
 ### Live Indicators (yfinance)
 | Indicator | Value | Change | BIAS | Note |
 |-----|-----|-------|------|------|
-| DXY | 98.27 | -0.24% | [+] | Weak USD = Bullish |
-| VIX | 19.08 | +1.98% | [-] | Fear rising |
-| SPX | 7163.37 | -0.02% | [+] | Correlated w/ NQ |
-| NDX | 24765.47 | -0.29% | [+] | *Momentum Down* |
-| 10Y | 4.32 | +0.23% | [-] | Yields up = Bearish |
-| **BIAS** | **BEARISH** | **Score: 1/3** | | DXY down = Tailwind + VIX up = Fear Rising + NDX down = Negative |
+| DXY | 98.03 | -0.46% | [+] | Weak USD = Bullish |
+| VIX | 17.38 | -4.98% | [+] | Fear dropping |
+| SPX | 7259.22 | +0.81% | [-] | Correlated w/ NQ |
+| NDX | 28015.06 | +1.31% | [-] | *Momentum Up* |
+| 10Y | 4.42 | -0.67% | [+] | Yields down = Bullish |
+| **BIAS** | **BULLISH** | **Score: 3/3** | | DXY down = Tailwind + VIX down = Low Fear + NDX up = Momentum |
 
-> Data pulled automatically: 2026-04-27 16:34 IST
+> Data pulled automatically: 2026-05-06 07:55 IST
 
 ---
 
@@ -88,9 +88,9 @@ SSL (Target Down): ____
 ## Step 4 -- BIAS
 
 ```
-BEARISH -- 27/04/2026
-Reason: DXY down = Tailwind + VIX up = Fear Rising + NDX down = Negative
-Score: 1/3
+BULLISH -- 06/05/2026
+Reason: DXY down = Tailwind + VIX down = Low Fear + NDX up = Momentum
+Score: 3/3
 ```
 
 ---
